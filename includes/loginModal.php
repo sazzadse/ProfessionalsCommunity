@@ -11,7 +11,8 @@
             
             <div class="modal-body text-center">
                 
-                <?php if (isset($_SESSION['error']) && isset($_GET['login'])): ?>
+                <!-- Login Error Alert -->
+                <?php if (isset($_SESSION['error']) && (!isset($_GET['login']) || $_GET['login'] !== 'reset')): ?>
                     <div class="alert alert-<?php echo strpos($_SESSION['error'], 'Success') !== false ? 'success' : 'danger'; ?> alert-dismissible fade show text-center mb-3" role="alert">
                         <?php 
                             $msg = $_SESSION['error'];
@@ -28,6 +29,7 @@
                     <?php unset($_SESSION['error']); ?>
                 <?php endif; ?>
 
+                <!-- Login Section -->
                 <div id="loginSection">
                     <p class="text-muted mb-4">Please login to your account</p>
                     <form action="includes/login_process.php" method="POST">
@@ -41,32 +43,33 @@
                     </div>
                 </div>
 
-                <div id="forgotSection" style="display: none; padding: 10px 20px;">
-                    <p class="text-muted text-center mb-4" style="font-size: 14px;">Enter your email address and we'll send you a reset code.</p>
+                <!-- Forgot Password Section -->
+                <div id="forgotSection" style="display: none; opacity: 0; transition: opacity 0.2s ease;">
+                    <p class="text-muted mb-4">Enter your email to receive a temporary password</p>
 
-                    <?php if (isset($_SESSION['reset_error']) && isset($_GET['login']) && $_GET['login'] === 'reset'): ?>
-                        <div class="alert alert-danger alert-dismissible fade show text-left mb-3" role="alert" style="font-size: 13px;">
+                    <!-- Reset Error Message -->
+                    <?php if (isset($_SESSION['reset_error'])): ?>
+                        <div class="alert alert-danger alert-dismissible fade show text-center mb-3" role="alert">
                             <?php echo htmlspecialchars($_SESSION['reset_error']); unset($_SESSION['reset_error']); ?>
-                            <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span>&times;</span></button>
                         </div>
                     <?php endif; ?>
 
-                    <?php if (isset($_SESSION['reset_success']) && isset($_GET['login']) && $_GET['login'] === 'reset'): ?>
-                        <div class="alert alert-success alert-dismissible fade show text-left mb-3" role="alert" style="font-size: 13px;">
+                    <!-- Reset Success Message -->
+                    <?php if (isset($_SESSION['reset_success'])): ?>
+                        <div class="alert alert-success alert-dismissible fade show text-center mb-3" role="alert">
                             <?php echo $_SESSION['reset_success']; unset($_SESSION['reset_success']); ?>
-                            <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span>&times;</span></button>
                         </div>
                     <?php endif; ?>
 
-                    <form action="includes/reset_password.php" method="POST" class="text-left">
-                        <div class="form-group mb-4">
-                            <label for="resetEmail" class="text-secondary" style="font-size: 14px;">Email Address</label>
-                            <input type="email" id="resetEmail" name="email" class="form-control px-3" style="border-radius: 6px; border: 1px solid #ced4da;" required>
-                        </div>
-                        <button type="submit" class="btn btn-block" style="background-color: #1a497b; color: white; border-radius: 6px; padding: 10px 0; font-weight: 500;">Send Reset Code</button>
+                    <form action="includes/reset_password.php" method="POST">
+                        <input type="email" id="resetEmail" name="email" class="form-control mb-3 rounded-pill px-3" placeholder="Email Address" required>
+                        <button type="submit" class="btn btn-primary btn-block rounded-pill">SEND TEMPORARY PASSWORD</button>
                     </form>
-                    <div class="mt-4 text-center">
-                        <a href="javascript:void(0);" style="color: #6c8ebf; font-size: 14px; text-decoration: none;" id="switchToLogin">Back to Login</a>
+
+                    <div class="mt-3 text-center">
+                        <a href="javascript:void(0);" class="text-secondary small" id="switchToLogin">Back to Login</a>
                     </div>
                 </div>
 
@@ -83,7 +86,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const switchToForgot = document.getElementById('switchToForgot');
     const switchToLogin = document.getElementById('switchToLogin');
 
-    // Smooth transition helper
     function switchView(hideView, showView, targetTitle) {
         hideView.style.opacity = 0;
         setTimeout(() => {
@@ -96,21 +98,18 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 200);
     }
 
-    // Click to go to Forgot Password view
     if (switchToForgot) {
         switchToForgot.addEventListener('click', function() {
             switchView(loginSection, forgotSection, 'Forgot Password');
         });
     }
 
-    // Click to go back to Login view
     if (switchToLogin) {
         switchToLogin.addEventListener('click', function() {
             switchView(forgotSection, loginSection, 'Welcome Back!');
         });
     }
 
-    // Reset back to Login state whenever modal is closed
     if (window.jQuery) {
         $('#loginModal').on('hidden.bs.modal', function () {
             forgotSection.style.display = 'none';
@@ -120,11 +119,9 @@ document.addEventListener("DOMContentLoaded", function() {
             modalTitle.textContent = 'Welcome Back!';
         });
 
-        // Automatically show modal if redirected with login parameter
         <?php if (isset($_GET['login'])): ?>
             $('#loginModal').modal('show');
             <?php if ($_GET['login'] === 'reset'): ?>
-            // Auto-switch to forgot password view on reset redirect
             setTimeout(function() {
                 loginSection.style.display = 'none';
                 loginSection.style.opacity = 0;

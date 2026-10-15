@@ -73,13 +73,13 @@ $base_url   = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https:/
             <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i class="ti-facebook"></i></a></li>
             <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i class="ti-twitter-alt"></i></a></li>
             <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i class="ti-linkedin"></i></a></li>
-            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i class="ti-instagram"></i></a></li>
+            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i class="ti-youtube"></i></a></li>
           </ul>
         </div>
         <div class="col-lg-8 text-center text-lg-right">
           <ul class="list-inline">
             <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?>
-              <li class="list-inline-item"><a class="text-color p-sm-2 py-2 px-0 d-inline-block font-weight-bold" href="<?php echo $base_url; ?>/member-profile.php"><i class="ti-user text-danger mr-1"></i> My Profile</a></li>
+              <li class="list-inline-item"><a class="text-color p-sm-2 py-2 px-0 d-inline-block font-weight-bold" href="<?php echo $base_url; ?>/member-profile.php"><i class="ti-user text-danger mr-1"></i> My Profile</a></li>|
               <li class="list-inline-item"><a class="text-color p-sm-2 py-2 px-0 d-inline-block" href="<?php echo $base_url; ?>/includes/logout.php">Logout</a></li>
             <?php else: ?>
               <li class="list-inline-item"><a class="text-color p-sm-2 py-2 px-0 d-inline-block" href="#" data-toggle="modal" data-target="#loginModal">Member Login</a></li>|
@@ -105,17 +105,41 @@ $base_url   = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https:/
             <li class="nav-item <?php echo $current_page == 'index' ? 'active' : ''; ?>">
                 <a class="nav-link" href="<?php echo $base_url; ?>/index.php">Home</a>
             </li>
-            <li class="nav-item <?php echo $current_page == 'about' ? 'active' : ''; ?>">
-                <a class="nav-link" href="<?php echo $base_url; ?>/about.php">About</a>
+            <li class="nav-item dropdown view">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    About Us
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="<?php echo $base_url; ?>/about.php">About ITLC</a>
+                    <a class="dropdown-item" href="<?php echo $base_url; ?>/notice-single.php">President's Message</a>
+                    <a class="dropdown-item" href="<?php echo $base_url; ?>/member-profile.php">EC Member</a>
+                    <a class="dropdown-item" href="<?php echo $base_url; ?>/notice.php">EC Member (Adviser)</a>
+                </div>
             </li>
-            <li class="nav-item <?php echo $current_page == 'member' ? 'active' : ''; ?>">
-                <a class="nav-link" href="<?php echo $base_url; ?>/member.php">MEMBERS</a>
+            <li class="nav-item dropdown view">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Membership
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="<?php echo $base_url; ?>/member-profile">Membership Criteria</a>
+                    <a class="dropdown-item" href="<?php echo $base_url; ?>/research.php">Membership Fee</a>
+                    <a class="dropdown-item" href="<?php echo $base_url; ?>/notice.php">Member Benefits</a>
+                    <a class="dropdown-item" href="<?php echo $base_url; ?>/member.php">Our Members</a>
+                    <a class="dropdown-item" href="<?php echo $base_url; ?>/member.php">Professional Guidelines</a>
+                </div>
             </li>
-            <li class="nav-item <?php echo $current_page == 'events' ? 'active' : ''; ?>">
-                <a class="nav-link" href="<?php echo $base_url; ?>/events.php">EVENTS</a>
-            </li>
-            <li class="nav-item <?php echo $current_page == 'blog' ? 'active' : ''; ?>">
-                <a class="nav-link" href="<?php echo $base_url; ?>/blog.php">BLOG</a>
+            <li class="nav-item dropdown view">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Media Center
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="<?php echo $base_url; ?>/blog.php">News</a>
+                    <a class="dropdown-item" href="<?php echo $base_url; ?>/events.php">Events</a>
+                    <a class="dropdown-item" href="<?php echo $base_url; ?>/notice.php">Photo Gallery</a>
+                </div>
             </li>
             <li class="nav-item dropdown view">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -131,11 +155,12 @@ $base_url   = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https:/
                     <a class="dropdown-item" href="<?php echo $base_url; ?>/scholarship.php">Scholarship</a>
                     <a class="dropdown-item" href="<?php echo $base_url; ?>/course-single.php">Course Details</a>
                     <a class="dropdown-item" href="<?php echo $base_url; ?>/event-single.php">Event Details</a>
+                    <a class="dropdown-item" href="<?php echo $base_url; ?>/blog.php">Blog</a>
                     <a class="dropdown-item" href="<?php echo $base_url; ?>/blog-single.php">Blog Details</a>
                 </div>
             </li>
             <li class="nav-item <?php echo $current_page == 'contact' ? 'active' : ''; ?>">
-                <a class="nav-link" href="<?php echo $base_url; ?>/contact.php">CONTACT</a>
+                <a class="nav-link" href="<?php echo $base_url; ?>/contact.php">Contact</a>
             </li>
           </ul>
         </div>

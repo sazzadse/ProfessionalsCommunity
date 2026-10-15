@@ -98,6 +98,20 @@
         font-size: 28px;
     }
 }
+
+/* Partner Logo Grayscale & Hover Transition */
+.partner-logo {
+    height: 70px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+.partner-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: translateY(-3px);
+}
 </style>
 
 <!-- hero slider -->
@@ -176,7 +190,7 @@
         <!-- Section Header Title -->
         <div class="row justify-content-center text-center mb-4">
             <div class="col-lg-8">
-                <h3 class="font-weight-bold mb-2 text-center" style="color: #ffffff; font-size: 30px; letter-spacing: -0.3px;">Our Community</h3>
+                <h3 class="font-weight-bold mb-2 text-center" style="color: #ffffff; font-size: 30px; letter-spacing: -0.5px; margin-bottom: 15px!important;">Our Community</h3>
                 <p class="mb-0 text-center" style="color: rgba(255, 255, 255, 0.85); font-size: 15px;">Uniting visionary leaders, IT professionals, and students across the nation.</p>
             </div>
         </div>
@@ -241,7 +255,7 @@
         <!-- Section Title -->
         <div class="row justify-content-center mb-3">
             <div class="col-lg-8 text-center">
-                <h3 class="section-title font-weight-bold text-center" style="color: #06487a !important; font-size: 30px; letter-spacing: -0.5px; margin-bottom: 8px;">Our Driving Purpose</h3>
+                <h3 class="section-title font-weight-bold text-center" style="color: #06487a !important; font-size: 30px; letter-spacing: -0.5px; margin-bottom: 15px;">Our Driving Purpose</h3>
                 <p class="text-center" style="color: #06487a; font-size: 15px; margin-bottom: 0;">Guiding tech excellence, leadership, and digital transformation across the industry.</p>
             </div>
         </div>
@@ -556,21 +570,36 @@
 <!-- /our members -->
 
 <!-- Our Partners -->
-<section class="section pb-5 pt-0">
+<section class="section py-5">
     <div class="container">
-        <div class="row justify-content-center mb-5">
+        <!-- Section Title -->
+        <div class="row justify-content-center mb-4">
             <div class="col-lg-8 text-center">
-                <h3 class="section-title">Our Partners</h3>
-                <p class="text-muted">Collaborating with industry leaders to drive technological advancement.</p>
+                <h3 class="section-title font-weight-bold" style="color: #06487a !important; font-size: 25px; margin-bottom: 8px !important;">Our Partners</h3>
+                <p class="text-center mb-0" style="color: #06487a; font-size: 15px; margin-bottom: 15px !important;">Collaborating with industry leaders to drive technological advancement.</p>
             </div>
         </div>
-        <div class="partner-slider text-center">
-            <div class="px-3"><img src="https://via.placeholder.com/150x80/f8f9fa/06487a?text=Partner+1" class="img-fluid mx-auto rounded" style="filter: grayscale(100%); transition: 0.3s; opacity: 0.7;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7';" alt="Partner 1"></div>
-            <div class="px-3"><img src="https://via.placeholder.com/150x80/f8f9fa/06487a?text=Partner+2" class="img-fluid mx-auto rounded" style="filter: grayscale(100%); transition: 0.3s; opacity: 0.7;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7';" alt="Partner 2"></div>
-            <div class="px-3"><img src="https://via.placeholder.com/150x80/f8f9fa/06487a?text=Partner+3" class="img-fluid mx-auto rounded" style="filter: grayscale(100%); transition: 0.3s; opacity: 0.7;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7';" alt="Partner 3"></div>
-            <div class="px-3"><img src="https://via.placeholder.com/150x80/f8f9fa/06487a?text=Partner+4" class="img-fluid mx-auto rounded" style="filter: grayscale(100%); transition: 0.3s; opacity: 0.7;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7';" alt="Partner 4"></div>
-            <div class="px-3"><img src="https://via.placeholder.com/150x80/f8f9fa/06487a?text=Partner+5" class="img-fluid mx-auto rounded" style="filter: grayscale(100%); transition: 0.3s; opacity: 0.7;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7';" alt="Partner 5"></div>
-            <div class="px-3"><img src="https://via.placeholder.com/150x80/f8f9fa/06487a?text=Partner+6" class="img-fluid mx-auto rounded" style="filter: grayscale(100%); transition: 0.3s; opacity: 0.7;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7';" alt="Partner 6"></div>
+
+        <!-- Partner Slider/Grid -->
+        <div class="partner-slider text-center align-items-center">
+            <div class="px-3">
+                <img src="images/partners/partners1.png" class="img-fluid mx-auto partner-logo" alt="Partner 1">
+            </div>
+            <div class="px-3">
+                <img src="images/partners/partners2.png" class="img-fluid mx-auto partner-logo" alt="Partner 2">
+            </div>
+            <div class="px-3">
+                <img src="images/partners/partners3.png" class="img-fluid mx-auto partner-logo" alt="Partner 3">
+            </div>
+            <div class="px-3">
+                <img src="images/partners/partners4.png" class="img-fluid mx-auto partner-logo" alt="Partner 4">
+            </div>
+            <div class="px-3">
+                <img src="images/partners/partners5.png" class="img-fluid mx-auto partner-logo" alt="Partner 5">
+            </div>
+            <div class="px-3">
+                <img src="images/partners/partners6.png" class="img-fluid mx-auto partner-logo" alt="Partner 6">
+            </div>
         </div>
     </div>
 </section>

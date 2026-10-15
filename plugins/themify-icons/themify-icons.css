@@ -1349,7 +1349,8 @@
 }
 
 .ti-twitter-alt:before {
-  content: "\e74b";
+    content: "X" !important;
+    font-weight: bold;
 }
 
 .ti-tumblr-alt:before {

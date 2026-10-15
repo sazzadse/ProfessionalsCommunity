@@ -96,56 +96,73 @@ $membership_result = $conn->query($membership_query);
                         background-color: #f8fbfd;
                     }
                     </style>
+
                     <div class="row">
-                    <div class="col-12 mt-4">
-                        <h5 class="mb-3" style="color: #333; font-weight: 500;">Membership & Payment</h5>
-                        <p class="text-muted mb-4" style="font-size: 14px;">Select Membership Category <span class="text-danger">*</span></p>
-                        <div class="row">
-                            <!-- Lifetime Member -->
-                            <div class="col-md-6 mb-3">
-                                <input type="radio" name="membership_type_id" id="mem1" value="1" class="d-none membership-radio" required>
-                                <label for="mem1" class="membership-card d-block mb-0 h-100">
-                                    <h6 style="color: #2b70d0; font-weight: 600; font-size: 15px;">Lifetime Member</h6>
-                                    <p class="text-muted small mb-2">Minimum 15 Years Job Experience</p>
-                                    <h3 class="mb-1" style="color: #178351; font-weight: 700;">20000</h3>
-                                    <p class="text-muted small mb-2">One Time</p>
-                                    <span class="badge badge-light border text-muted" style="font-size: 11px;">Vote: Yes</span>
-                                </label>
+                        <div class="col-12 mt-4">
+                            <h5 class="mb-3 text-center" style="color: #06487a; font-weight: 500;">Membership & Payment</h5>
+                            <p class="text-muted mb-4 text-center" style="font-size: 14px;">Select Membership Category <span class="text-danger">*</span></p>
+                            
+                            <div class="row justify-content-center">
+                                <!-- Lifetime Member -->
+                                <div class="col-md-6 mb-3">
+                                    <input type="radio" name="membership_type_id" id="mem1" value="1" class="d-none membership-radio" required>
+                                    <label for="mem1" class="membership-card d-block mb-0 h-100 px-4 py-3">
+                                        <div class="text-center">
+                                            <h6 style="color: #06487a; font-weight: 600; font-size: 15px;" class="mb-1">Lifetime Member</h6>
+                                        </div>
+                                        <p class="text-muted small mb-2 text-center">Minimum 15 Years Job Experience</p>
+                                        <div class="text-center">
+                                            <h3 class="mb-0" style="color: #28a745; font-weight: 700;">20,000 <span style="font-size: 16px; font-weight: 600;">BDT</span></h3>
+                                        </div>
+                                        <p class="text-muted small mb-0 text-center">One Time</p>
+                                    </label>
+                                </div>
+
+                                <!-- Professional Member -->
+                                <div class="col-md-6 mb-3">
+                                    <input type="radio" name="membership_type_id" id="mem2" value="2" class="d-none membership-radio" required>
+                                    <label for="mem2" class="membership-card d-block mb-0 h-100 px-4 py-3">
+                                        <div class="text-center">
+                                            <h6 style="color: #06487a; font-weight: 600; font-size: 15px;" class="mb-1">Professional Member</h6>
+                                        </div>
+                                        <p class="text-muted small mb-2 text-center">Minimum 5 Years Job Experience</p>
+                                        <div class="text-center">
+                                            <h3 class="mb-0" style="color: #28a745; font-weight: 700;">5,000 <span style="font-size: 16px; font-weight: 600;">BDT</span></h3>
+                                        </div>
+                                        <p class="text-muted small mb-0 text-center">Yearly</p>
+                                    </label>
+                                </div>
+
+                                <!-- General Member -->
+                                <div class="col-md-6 mb-3">
+                                    <input type="radio" name="membership_type_id" id="mem3" value="3" class="d-none membership-radio" required>
+                                    <label for="mem3" class="membership-card d-block mb-0 h-100 px-4 py-3">
+                                        <div class="text-center">
+                                            <h6 style="color: #06487a; font-weight: 600; font-size: 15px;" class="mb-1">General Member</h6>
+                                        </div>
+                                        <p class="text-muted small mb-2 text-center">Minimum 2 Years Job Experience</p>
+                                        <div class="text-center">
+                                            <h3 class="mb-0" style="color: #28a745; font-weight: 700;">1,500 <span style="font-size: 16px; font-weight: 600;">BDT</span></h3>
+                                        </div>
+                                        <p class="text-muted small mb-0 text-center">Yearly</p>
+                                    </label>
+                                </div>
+
+                                <!-- Student Member -->
+                                <div class="col-md-6 mb-3">
+                                    <input type="radio" name="membership_type_id" id="mem4" value="4" class="d-none membership-radio" required>
+                                    <label for="mem4" class="membership-card d-block mb-0 h-100 px-4 py-3">
+                                        <div class="text-center">
+                                            <h6 style="color: #06487a; font-weight: 600; font-size: 15px;" class="mb-1">Student Member</h6>
+                                        </div>
+                                        <p class="text-muted small mb-2 text-center">Fresher</p>
+                                        <div class="text-center">
+                                            <h3 class="mb-0" style="color: #28a745; font-weight: 700;">500 <span style="font-size: 16px; font-weight: 600;">BDT</span></h3>
+                                        </div>
+                                        <p class="text-muted small mb-0 text-center">Yearly</p>
+                                    </label>
+                                </div>
                             </div>
-                            <!-- CXO Professional Member -->
-                            <div class="col-md-6 mb-3">
-                                <input type="radio" name="membership_type_id" id="mem2" value="2" class="d-none membership-radio" required>
-                                <label for="mem2" class="membership-card d-block mb-0 h-100">
-                                    <h6 style="color: #2b70d0; font-weight: 600; font-size: 15px;">CXO Professional Member</h6>
-                                    <p class="text-muted small mb-2">Minimum 5 Years Job Experience</p>
-                                    <h3 class="mb-1" style="color: #178351; font-weight: 700;">5000</h3>
-                                    <p class="text-muted small mb-2">Yearly</p>
-                                    <span class="badge badge-light border text-muted" style="font-size: 11px;">Vote: Yes</span>
-                                </label>
-                            </div>
-                            <!-- Professional Member -->
-                            <div class="col-md-6 mb-3">
-                                <input type="radio" name="membership_type_id" id="mem3" value="3" class="d-none membership-radio" required>
-                                <label for="mem3" class="membership-card d-block mb-0 h-100">
-                                    <h6 style="color: #2b70d0; font-weight: 600; font-size: 15px;">Professional Member</h6>
-                                    <p class="text-muted small mb-2">Minimum 2 Years Job Experience</p>
-                                    <h3 class="mb-1" style="color: #178351; font-weight: 700;">1500</h3>
-                                    <p class="text-muted small mb-2">Yearly</p>
-                                    <span class="badge badge-light border text-muted" style="font-size: 11px;">Vote: Yes</span>
-                                </label>
-                            </div>
-                            <!-- Student Member -->
-                            <div class="col-md-6 mb-3">
-                                <input type="radio" name="membership_type_id" id="mem4" value="4" class="d-none membership-radio" required>
-                                <label for="mem4" class="membership-card d-block mb-0 h-100">
-                                    <h6 style="color: #2b70d0; font-weight: 600; font-size: 15px;">Student Member</h6>
-                                    <p class="text-muted small mb-2">Fresher</p>
-                                    <h3 class="mb-1" style="color: #178351; font-weight: 700;">500</h3>
-                                    <p class="text-muted small mb-2">Yearly</p>
-                                    <span class="badge badge-light border text-muted" style="font-size: 11px;">Vote: No</span>
-                                </label>
-                            </div>
-                        </div>
                         </div>
                     </div>
 
