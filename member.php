@@ -48,10 +48,11 @@
   $total_pages = ceil($total_members / $limit);
 
   // Fetch paginated member records
-  $sql = "SELECT u.*, p.profession_name, c.country_name 
+  $sql = "SELECT u.*, p.profession_name, c.country_name, mt.membership_name 
           FROM `user` u 
           LEFT JOIN `profession` p ON u.profession_id = p.id 
           LEFT JOIN `country` c ON u.country_id = c.id 
+          LEFT JOIN `membership_type` mt ON u.membership_type_id = mt.id 
           WHERE $where_sql 
           ORDER BY u.id ASC 
           LIMIT ? OFFSET ?";
@@ -84,39 +85,90 @@
 ?>
 
 <style>
-/* Search bar same height as dropdown */
-.member-search-input { height: 44px; }
-/* Pagination color override to site primary dark blue */
-.pagination .page-link { color: #06487a; }
-.pagination .page-item.active .page-link { background-color: #06487a; border-color: #06487a; color: #fff; }
-.pagination .page-item .page-link:hover { background-color: #06487a; color: #fff; border-color: #06487a; }
+    .itlc-about {
+        padding: 170px 0 60px;
+        color: #06487a;
+    }
+
+    .itlc-about h1 {
+        color: #ffbc3b;
+    }
+
+    .itlc-about h2,
+    .itlc-about p,
+    .itlc-about li,
+    .itlc-about strong {
+        color: #06487a;
+    }
+
+    /* Main Title */
+    .itlc-about .main-title {
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 1.4;
+        margin: 0 0 12px;
+    }
+
+    /* Title Underline */
+    .itlc-about .title-accent {
+        width: 45px;
+        height: 3px;
+        background: #06487a;
+        border-radius: 2px;
+        margin-bottom: 25px;
+    }
+
+    /* Search bar height & typography */
+    .member-search-input { 
+        height: 40px; 
+        font-size: 14px;
+    }
+
+    /* Pagination color override to site primary dark blue */
+    .pagination .page-link { 
+        color: #06487a; 
+    }
+    .pagination .page-item.active .page-link { 
+        background-color: #06487a; 
+        border-color: #06487a; 
+        color: #fff; 
+    }
+    .pagination .page-item .page-link:hover { 
+        background-color: #06487a; 
+        color: #fff; 
+        border-color: #06487a; 
+    }
+
+    @media (max-width: 767px) {
+        .itlc-about {
+            padding: 120px 0 40px;
+        }
+
+        .itlc-about .main-title {
+            font-size: 25px;
+        }
+    }
 </style>
 
-<!-- page title -->
-<section class="page-title-section overlay" data-background="images/backgrounds/page-title.jpg">
+<section class="itlc-about">
   <div class="container">
+
+    <!-- Page Header -->
     <div class="row">
-      <div class="col-md-10">
-        <ul class="list-inline custom-breadcrumb">
-          <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="member.php">Our Members</a></li>
-          <li class="list-inline-item text-white h3 font-secondary nasted">Directory</li>
-        </ul>
-        <p class="text-lighten">
-          Connecting senior IT leaders, executives, and technology professionals across Bangladesh.<br>
+      <div class="col-12">
+        <h1 class="main-title">Our Members</h1>
+        <div class="title-accent"></div>
+        <p class="mb-4">
+          Connecting senior IT leaders, executives, and technology professionals across Bangladesh.
           Empowering leadership development, industry standards, and strategic digital transformation.
         </p>
       </div>
     </div>
-  </div>
-</section>
-<!-- /page title -->
 
-<!-- Search Section -->
-<section class="section-sm bg-gray border-bottom pt-4 pb-4">
-  <div class="container">
-    <form action="member.php" method="GET">
-      <div class="row justify-content-center">
-        <div class="col-md-9">
+    <!-- Search Section -->
+    <div class="row mb-4 justify-content-center">
+      <div class="col-lg-8 col-md-10 col-12">
+        <form action="member.php" method="GET">
           <div class="input-group">
             <div class="input-group-prepend">
               <span class="input-group-text bg-white border-right-0"><i class="ti-search text-color"></i></span>
@@ -127,21 +179,15 @@
                 <i class="ti-search mr-1"></i> Search
               </button>
               <?php if (!empty($search_query)): ?>
-                <a href="member.php" class="btn btn-secondary member-search-input px-3">
+                <a href="member.php" class="btn btn-secondary member-search-input px-3" title="Reset Search">
                   <i class="ti-reload"></i>
                 </a>
               <?php endif; ?>
             </div>
           </div>
-        </div>
+        </form>
       </div>
-    </form>
-  </div>
-</section>
-
-<!-- Members Section -->
-<section class="section bg-white pt-5 pb-5">
-  <div class="container">
+    </div>
 
     <!-- Active Filter Badge / Result Counter -->
     <div class="row mb-4 align-items-center">
@@ -220,19 +266,16 @@
                 <!-- Right Side: Details -->
                 <div class="flex-grow-1" style="min-width:0;overflow-wrap:break-word;">
 
-                  <!-- Name + Verified Badge -->
+                  <!-- Name -->
                   <a href="<?php echo $profile_url; ?>">
                     <h5 class="mb-1" style="font-size:15px;line-height:1.3;color:#06487a;">
                       <?php echo htmlspecialchars($m['full_name']); ?>
-                      <span class="badge badge-success rounded-circle align-middle ml-1" style="font-size:9px;padding:3px 4px;" title="Verified">
-                        <i class="ti-check"></i>
-                      </span>
                     </h5>
                   </a>
 
                   <!-- Member ID -->
                   <p class="mb-1" style="font-size:12px;font-weight:600;">
-                    <?php echo htmlspecialchars(!empty($m['membership_id']) ? $m['membership_id'] : 'ITLC-Member'); ?>, Member
+                    <?php echo htmlspecialchars(!empty($m['membership_id']) ? $m['membership_id'] : 'ITLC-Member'); ?>, <?php echo htmlspecialchars(!empty($m['membership_name']) ? $m['membership_name'] : 'Member'); ?>
                   </p>
 
                   <!-- Position & Company -->
@@ -268,7 +311,7 @@
                   </p>
 
                   <!-- Full Bio Button -->
-                  <a href="<?php echo $profile_url; ?>" class="btn btn-primary btn-sm">Full Bio</a>
+                  <a href="<?php echo $profile_url; ?>" class="btn btn-primary btn-sm py-1 px-3" style="font-size: 11px;">Full Bio</a>
 
                 </div>
               </div>

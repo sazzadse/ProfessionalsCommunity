@@ -112,9 +112,9 @@ $base_url   = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https:/
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="<?php echo $base_url; ?>/about.php">About ITLC</a>
-                    <a class="dropdown-item" href="<?php echo $base_url; ?>/notice-single.php">President's Message</a>
-                    <a class="dropdown-item" href="<?php echo $base_url; ?>/member-profile.php">EC Member</a>
-                    <a class="dropdown-item" href="<?php echo $base_url; ?>/notice.php">EC Member (Adviser)</a>
+                    <a class="dropdown-item" href="<?php echo $base_url; ?>/presidents_message.php">President's Message</a>
+                    <a class="dropdown-item" href="<?php echo $base_url; ?>/ec-member.php">EC Member</a>
+                    <a class="dropdown-item" href="<?php echo $base_url; ?>/ec-adviser.php">EC Member (Adviser)</a>
                 </div>
             </li>
             <li class="nav-item dropdown view">
@@ -123,11 +123,11 @@ $base_url   = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https:/
                     Membership
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="<?php echo $base_url; ?>/member-profile">Membership Criteria</a>
-                    <a class="dropdown-item" href="<?php echo $base_url; ?>/research.php">Membership Fee</a>
-                    <a class="dropdown-item" href="<?php echo $base_url; ?>/notice.php">Member Benefits</a>
+                    <a class="dropdown-item" href="<?php echo $base_url; ?>/membership-criteria.php">Membership Criteria</a>
+                    <a class="dropdown-item" href="<?php echo $base_url; ?>/membership-fee.php">Membership Fee</a>
+                    <a class="dropdown-item" href="<?php echo $base_url; ?>/member-benefits.php">Member Benefits</a>
                     <a class="dropdown-item" href="<?php echo $base_url; ?>/member.php">Our Members</a>
-                    <a class="dropdown-item" href="<?php echo $base_url; ?>/member.php">Professional Guidelines</a>
+                    <a class="dropdown-item" href="<?php echo $base_url; ?>/professional-guidelines.php">Professional Guidelines</a>
                 </div>
             </li>
             <li class="nav-item dropdown view">
@@ -136,8 +136,8 @@ $base_url   = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https:/
                     Media Center
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="<?php echo $base_url; ?>/blog.php">News</a>
                     <a class="dropdown-item" href="<?php echo $base_url; ?>/events.php">Events</a>
+                    <a class="dropdown-item" href="<?php echo $base_url; ?>/blog.php">News</a>
                     <a class="dropdown-item" href="<?php echo $base_url; ?>/notice.php">Photo Gallery</a>
                 </div>
             </li>

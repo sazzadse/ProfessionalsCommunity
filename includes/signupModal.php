@@ -25,24 +25,40 @@ $membership_result = $conn->query($membership_query);
                 <p class="text-muted text-center mb-4">Join our IT Leadership Community!</p>
                 
                 <!-- ADD ALERTS HERE -->
-                <?php if (isset($_SESSION['error'])): ?>
+                <?php 
+                $signup_error = $_SESSION['signup_error'] ?? (isset($_GET['signup']) && $_GET['signup'] === 'error' ? ($_SESSION['error'] ?? null) : null);
+                if ($signup_error): 
+                ?>
                     <div class="alert alert-danger alert-dismissible fade show text-center mb-3" role="alert">
-                        <strong>Notice:</strong> <?php echo htmlspecialchars($_SESSION['error']); ?>
+                        <strong>Notice:</strong> <?php echo htmlspecialchars($signup_error); ?>
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <?php unset($_SESSION['error']); ?>
+                    <?php 
+                    unset($_SESSION['signup_error']); 
+                    if (isset($_SESSION['error']) && isset($_GET['signup'])) {
+                        unset($_SESSION['error']);
+                    }
+                    ?>
                 <?php endif; ?>
 
-                <?php if (isset($_SESSION['success'])): ?>
+                <?php 
+                $signup_success = $_SESSION['signup_success'] ?? (isset($_GET['signup']) && $_GET['signup'] === 'success' ? ($_SESSION['success'] ?? null) : null);
+                if ($signup_success): 
+                ?>
                     <div class="alert alert-success alert-dismissible fade show text-center mb-3" role="alert">
-                        <strong>Success!</strong> <?php echo htmlspecialchars($_SESSION['success']); ?>
+                        <strong>Success!</strong> <?php echo htmlspecialchars($signup_success); ?>
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <?php unset($_SESSION['success']); ?>
+                    <?php 
+                    unset($_SESSION['signup_success']); 
+                    if (isset($_SESSION['success']) && isset($_GET['signup'])) {
+                        unset($_SESSION['success']);
+                    }
+                    ?>
                 <?php endif; ?>
 
                 <form action="includes/signup_process.php" method="POST">
@@ -163,6 +179,9 @@ $membership_result = $conn->query($membership_query);
                                     </label>
                                 </div>
                             </div>
+                            <div id="membershipError" class="text-danger mt-2 text-center" style="display:none;">
+                                Please select a Membership Category.
+                            </div>
                         </div>
                     </div>
 
@@ -242,6 +261,25 @@ document.addEventListener("DOMContentLoaded", function () {
                 $(document.body).addClass('modal-open');
             }
         });
+
+        <?php if (isset($_GET['signup'])): ?>
+        $('#signupModal').modal('show');
+        <?php endif; ?>
     }
+});
+
+const membershipRadios = document.querySelectorAll(
+    '#signupModal input[name="membership_type_id"]'
+);
+const membershipError = document.getElementById('membershipError');
+
+membershipRadios.forEach(radio => {
+    radio.addEventListener('invalid', function () {
+        membershipError.style.display = 'block';
+    });
+
+    radio.addEventListener('change', function () {
+        membershipError.style.display = 'none';
+    });
 });
 </script>

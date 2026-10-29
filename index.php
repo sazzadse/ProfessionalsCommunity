@@ -334,7 +334,7 @@
     <div class="row">
       <div class="col-12">
         <div class="d-flex align-items-center section-title justify-content-between">
-          <h3 class="mb-0 text-nowrap mr-3">Events</h3>
+          <h3 class="mb-0 text-nowrap mr-3">Latest Events</h3>
           <div class="border-top w-100 border-primary d-none d-sm-block"></div>
           <div>
             <a href="events.php" class="btn btn-sm btn-primary-outline ml-sm-3 d-none d-sm-block">see all</a>
@@ -343,49 +343,49 @@
       </div>
     </div>
     <div class="row justify-content-center">
-  <!-- event -->
-  <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-    <div class="card border-0 rounded hover-shadow">
-      <div class="card-img position-relative">
-        <img class="card-img-top rounded-top" src="images/events/fecm_home.jpg" alt="event thumb">
-        <div class="card-date"><span>19</span><br>Septemter<br>2025</div>
+      <!-- event 6 -->
+      <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+        <div class="card border-0 rounded hover-shadow">
+          <div class="card-img position-relative">
+            <img class="card-img-top rounded-top" src="images/events/event-6.jpg" alt="event thumb">
+            <div class="card-date"><span>12</span><br>September<br>2026</div>
+          </div>
+          <div class="card-body">
+            <!-- location -->
+            <p><i class="ti-location-pin text-primary mr-2"></i>Pan Pacific Sonargaon, Dhaka</p>
+            <a href="event-details-6.php"><h4 class="card-title">Executive Committee Meeting of ITLC</h4></a>
+          </div>
+        </div>
       </div>
-      <div class="card-body">
-        <!-- location -->
-        <p><i class="ti-location-pin text-primary mr-2"></i>Pan Pacific Sonargaon, Dhaka</p>
-        <a href="event-single.php"><h4 class="card-title">First Executive Committee Meeting of ITLC</h4></a>
+      <!-- event 5 -->
+      <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+        <div class="card border-0 rounded hover-shadow">
+          <div class="card-img position-relative">
+            <img class="card-img-top rounded-top" src="images/events/event-5.jpg" alt="event thumb">
+            <div class="card-date"><span>15</span><br>June<br>2026</div>
+          </div>
+          <div class="card-body">
+            <!-- location -->
+            <p><i class="ti-location-pin text-primary mr-2"></i>Pan Pacific Sonargaon, Dhaka</p>
+            <a href="event-details-5.php"><h4 class="card-title">Executive Committee Meeting of ITLC</h4></a>
+          </div>
+        </div>
+      </div>
+      <!-- event 4 -->
+      <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+        <div class="card border-0 rounded hover-shadow">
+          <div class="card-img position-relative">
+            <img class="card-img-top rounded-top" src="images/events/event-4.jpg" alt="event thumb">
+            <div class="card-date"><span>20</span><br>April<br>2026</div>
+          </div>
+          <div class="card-body">
+            <!-- location -->
+            <p><i class="ti-location-pin text-primary mr-2"></i>Pan Pacific Sonargaon, Dhaka</p>
+            <a href="event-details-4.php"><h4 class="card-title">Executive Committee Meeting of ITLC</h4></a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- event -->
-  <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-    <div class="card border-0 rounded hover-shadow">
-      <div class="card-img position-relative">
-        <img class="card-img-top rounded-top" src="images/events/event-2.jpg" alt="event thumb">
-        <div class="card-date"><span>21</span><br>December</div>
-      </div>
-      <div class="card-body">
-        <!-- location -->
-        <p><i class="ti-location-pin text-primary mr-2"></i>Cambridge, USA</p>
-        <a href="event-single.php"><h4 class="card-title">Research seminar in clinical science.</h4></a>
-      </div>
-    </div>
-  </div>
-  <!-- event -->
-  <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-    <div class="card border-0 rounded hover-shadow">
-      <div class="card-img position-relative">
-        <img class="card-img-top rounded-top" src="images/events/event-3.jpg" alt="event thumb">
-        <div class="card-date"><span>23</span><br>December</div>
-      </div>
-      <div class="card-body">
-        <!-- location -->
-        <p><i class="ti-location-pin text-primary mr-2"></i>Dhanmondi Lake, Dhaka</p>
-        <a href="event-single.php"><h4 class="card-title">Firefly training in trauma-informed yoga</h4></a>
-      </div>
-    </div>
-  </div>
-</div>
     <!-- mobile see all button -->
     <div class="row">
       <div class="col-12 text-center">

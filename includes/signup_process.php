@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Basic required field validation
     if (empty($full_name) || empty($email) || empty($plain_password) || empty($mobile) || empty($position) || !$profession_id || !$membership_type_id) {
-        $_SESSION['error'] = "Please fill in all mandatory fields.";
+        $_SESSION['signup_error'] = "Please fill in all mandatory fields.";
         header("Location: ../index.php?signup=error");
         exit;
     }
@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $check_email->store_result();
 
     if ($check_email->num_rows > 0) {
-        $_SESSION['error'] = "An account with this email address already exists.";
+        $_SESSION['signup_error'] = "An account with this email address already exists.";
         $check_email->close();
         header("Location: ../index.php?signup=error");
         exit;
@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $check_mobile->store_result();
 
     if ($check_mobile->num_rows > 0) {
-        $_SESSION['error'] = "An account with this mobile number already exists.";
+        $_SESSION['signup_error'] = "An account with this mobile number already exists.";
         $check_mobile->close();
         header("Location: ../index.php?signup=error");
         exit;
@@ -98,11 +98,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // 8. Execute statement and return response
     if ($stmt->execute()) {
-        $_SESSION['success'] = "Registered successfully! Your Membership ID is " . $membership_id;
+        $_SESSION['signup_success'] = "Registered successfully! Your Membership ID is " . $membership_id;
         header("Location: ../index.php?signup=success");
         exit;
     } else {
-        $_SESSION['error'] = "Something went wrong while creating your account. Please try again.";
+        $_SESSION['signup_error'] = "Something went wrong while creating your account. Please try again.";
         header("Location: ../index.php?signup=error");
         exit;
     }

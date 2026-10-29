@@ -418,7 +418,7 @@ textarea.form-control-profile {
               <h5 class="font-weight-bold mb-3 text-dark" style="font-size: 16px;">Event Related Info</h5>
               <div class="row mb-4">
                 <div class="col-md-6 mb-3">
-                  <label class="font-weight-bold small text-dark mb-1">Payment To(Bank/Mobile Account)</label>
+                  <label class="font-weight-bold small text-dark mb-1">Payment To (Bank/Mobile Account)</label>
                   <select name="event_payment_account_id" class="form-control form-control-profile">
                     <option value="">Select Account</option>
                     <?php foreach ($payment_accounts as $pa): ?>
@@ -430,12 +430,12 @@ textarea.form-control-profile {
                 </div>
 
                 <div class="col-md-6 mb-3">
-                  <label class="font-weight-bold small text-dark mb-1">Trans Num(Event)</label>
+                  <label class="font-weight-bold small text-dark mb-1">Transaction ID (Event)</label>
                   <input type="text" name="event_trans_num" class="form-control form-control-profile" value="<?php echo htmlspecialchars($user_data['event_trans_num'] ?? ''); ?>">
                 </div>
 
                 <div class="col-md-6 mb-3">
-                  <label class="font-weight-bold small text-dark mb-1">T-shirt size</label>
+                  <label class="font-weight-bold small text-dark mb-1">T-Shirt Size</label>
                   <select name="t_shirt_size" class="form-control form-control-profile">
                     <option value="">Select T-shirt Size</option>
                     <?php 
@@ -477,7 +477,7 @@ textarea.form-control-profile {
               <h5 class="font-weight-bold mb-3 text-dark" style="font-size: 16px;">Membership Related Info</h5>
               <div class="row mb-4">
                 <div class="col-md-6 mb-3">
-                  <label class="font-weight-bold small text-dark mb-1">Payment To(Bank/Mobile Account)</label>
+                  <label class="font-weight-bold small text-dark mb-1">Payment To (Bank/Mobile Account)</label>
                   <select name="member_payment_account_id" class="form-control form-control-profile">
                     <option value="">Select Account</option>
                     <?php foreach ($payment_accounts as $pa): ?>
@@ -489,7 +489,7 @@ textarea.form-control-profile {
                 </div>
 
                 <div class="col-md-6 mb-3">
-                  <label class="font-weight-bold small text-dark mb-1">Trans Num(Membership)</label>
+                  <label class="font-weight-bold small text-dark mb-1">Transaction ID (Membership)</label>
                   <input type="text" name="member_trans_num" class="form-control form-control-profile" value="<?php echo htmlspecialchars($user_data['member_trans_num'] ?? ''); ?>">
                 </div>
               </div>

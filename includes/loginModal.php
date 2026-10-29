@@ -12,7 +12,7 @@
             <div class="modal-body text-center">
                 
                 <!-- Login Error Alert -->
-                <?php if (isset($_SESSION['error']) && (!isset($_GET['login']) || $_GET['login'] !== 'reset')): ?>
+                <?php if (isset($_SESSION['error']) && !isset($_GET['signup']) && (!isset($_GET['login']) || $_GET['login'] !== 'reset')): ?>
                     <div class="alert alert-<?php echo strpos($_SESSION['error'], 'Success') !== false ? 'success' : 'danger'; ?> alert-dismissible fade show text-center mb-3" role="alert">
                         <?php 
                             $msg = $_SESSION['error'];

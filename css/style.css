@@ -1,4 +1,4 @@
-﻿/*!------------------------------------------------------------------
+/*!------------------------------------------------------------------
 [MAIN STYLESHEET]
 
 PROJECT:	Project Name
@@ -20,7 +20,7 @@ body {
   font-family: "Trebuchet MS", sans-serif;
   -webkit-font-smoothing: antialiased;
   font-size: 15px;
-  color: #5c5c77;
+  color: #555;
 }
 
 p, .paragraph {
@@ -187,6 +187,29 @@ h6, .h6 {
   color: #fff;
   background-color: #ffab08;
   border-color: #ffab08;
+}
+
+.btn-criteria {
+  background: #28a745;
+  color: #fff;
+}
+
+.btn-criteria::before {
+  background: #fff;
+}
+
+.btn-criteria:active {
+  background: #28a745 !important;
+  color: #28a745;
+}
+
+.btn-criteria:active::before {
+  height: 80%;
+}
+
+.btn-criteria:hover {
+  background: #218838;
+  color: #28a745;
 }
 
 .btn-secondary {
@@ -383,7 +406,7 @@ a h4:hover {
 }
 
 .text-color {
-  color: #5c5c77;
+  color: #555;
 }
 
 .text-light {

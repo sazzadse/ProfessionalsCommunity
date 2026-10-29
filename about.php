@@ -1,173 +1,300 @@
-<?php 
-  $page_title = "About Us";
 
-  include 'includes/config.php';
-  include 'includes/header.php';
+<?php
+$page_title = "About ITLC";
+
+include 'includes/config.php';
+include 'includes/header.php';
 ?>
 
-<!-- page title -->
-<section class="page-title-section overlay" data-background="images/backgrounds/page-title.jpg">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8">
-        <ul class="list-inline custom-breadcrumb">
-          <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="@@page-link">About Us</a></li>
-          <li class="list-inline-item text-white h3 font-secondary @@nasted"></li>
-        </ul>
-        <p class="text-lighten">Our courses offer a good compromise between the continuous assessment favoured by some universities and the emphasis placed on final exams by others.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /page title -->
+<style>
+    .itlc-about {
+        padding: 170px 0 60px;
+        color: #06487a;
+    }
 
-<!-- about -->
-<section class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <img class="img-fluid w-100 mb-4" src="images/about/about-page.jpg" alt="about image">
-        <h2 class="section-title">ABOUT OUR JOURNY</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe ipsa illo quod veritatis, magni debitis fugiat dolore voluptates! Consequatur, aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat perferendis sint optio similique. Et amet magni facilis vero corporis quos.</p>
-        <p>exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum a, facere fugit error accusamus est officiis vero in, nostrum laboriosam corrupti explicabo, cumque repudiandae deleniti perspiciatis quae consectetur enim. Laboriosam!</p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /about -->
+    .itlc-about h1 {
+        color: #ffbc3b;
+    }
 
-<!-- funfacts -->
-<section class="section-sm bg-primary">
-  <div class="container">
-    <div class="row">
-      <!-- funfacts item -->
-      <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
-        <div class="text-center">
-          <h2 class="count text-white" data-count="60">0</h2>
-          <h5 class="text-white">TEACHERS</h5>
-        </div>
-      </div>
-      <!-- funfacts item -->
-      <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
-        <div class="text-center">
-          <h2 class="count text-white" data-count="50">0</h2>
-          <h5 class="text-white">COURSES</h5>
-        </div>
-      </div>
-      <!-- funfacts item -->
-      <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
-        <div class="text-center">
-          <h2 class="count text-white" data-count="1000">0</h2>
-          <h5 class="text-white">STUDENTS</h5>
-        </div>
-      </div>
-      <!-- funfacts item -->
-      <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
-        <div class="text-center">
-          <h2 class="count text-white" data-count="3737">0</h2>
-          <h5 class="text-white">SATISFIED CLIENT</h5>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /funfacts -->
+    .itlc-about h2,
+    .itlc-about p,
+    .itlc-about li,
+    .itlc-about strong {
+        color: #06487a;
+    }
 
-<!-- success story -->
-<section class="section bg-cover" data-background="images/backgrounds/success-story.jpg">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 col-sm-4 position-relative success-video">
-        <a class="play-btn venobox" href="https://youtu.be/nA1Aqp0sPQo" data-vbtype="video">
-          <i class="ti-control-play"></i>
-        </a>
-      </div>
-      <div class="col-lg-6 col-sm-8">
-        <div class="bg-white p-5">
-          <h2 class="section-title">Success Stories</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /success story -->
+    /* Main Title */
+    .itlc-about .main-title {
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 1.4;
+        margin: 0 0 12px;
+    }
 
-<!-- teachers -->
-<section class="section">
+    /* Title Underline */
+    .itlc-about .title-accent {
+        width: 45px;
+        height: 3px;
+        background: #06487a;
+        border-radius: 2px;
+        margin-bottom: 25px;
+    }
+
+    /* Section Headings */
+    .itlc-about .section-heading {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.5;
+        margin: 0 0 12px;
+    }
+
+    /* Paragraph - Same as Home Page */
+    .itlc-about p {
+        color: #06487a;
+        font-size: 15px;
+        line-height: 1.8;
+        font-weight: 400;
+        margin: 0 0 14px;
+    }
+
+    .itlc-about strong {
+        font-weight: 700;
+    }
+
+    /* Section Spacing */
+    .itlc-about .content-section {
+        margin-top: 12px;
+    }
+
+    /* Activities List */
+    .itlc-about .activities-list {
+        list-style: none;
+        padding: 0;
+        margin: 12px 0 0;
+    }
+
+    .itlc-about .activities-list li {
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 8px;
+        color: #06487a;
+        font-size: 15px;
+        line-height: 1.8;
+        font-weight: 400;
+    }
+
+    /* Custom Blue Bullet */
+    .itlc-about .activities-list li::before {
+        content: "";
+        position: absolute;
+        left: 2px;
+        top: 10px;
+        width: 8px;
+        height: 8px;
+        background: #06487a;
+        border-radius: 50%;
+    }
+
+    /* CTA Box */
+    .cta-box {
+        background: #f8fbfd;
+        border: 1px solid #dbe7f0;
+        border-radius: 6px;
+        padding: 30px;
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .cta-box h4 {
+        color: #06487a;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .cta-box p {
+        color: #06487a;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    /* Green Criteria Button with theme animation */
+    .btn-criteria {
+        background: #28a745;
+        color: #fff;
+    }
+
+    .btn-criteria::before {
+        background: #fff;
+    }
+
+    .btn-criteria:hover {
+        background: #218838;
+        color: #28a745;
+    }
+
+    .btn-criteria:active {
+        background: #28a745 !important;
+        color: #28a745;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 767px) {
+        .itlc-about {
+            padding: 120px 0 40px;
+        }
+
+        .itlc-about .main-title {
+            font-size: 25px;
+        }
+
+        .itlc-about .section-heading {
+            font-size: 20px;
+        }
+
+        .itlc-about .content-section {
+            margin-top: 24px;
+        }
+    }
+</style>
+
+<section class="itlc-about">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12">
-          <h2 class="section-title">Our Teachers</h2>
-        </div>
-        <!-- teacher -->
-        <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-          <div class="card border-0 rounded-0 hover-shadow">
-            <img class="card-img-top rounded-0" src="images/teachers/teacher-1.jpg" alt="teacher">
-            <div class="card-body">
-              <a href="teacher-single.php">
-                <h4 class="card-title">Jacke Masito</h4>
-              </a>
-              <div class="d-flex justify-content-between">
-                <span>Teacher</span>
-                <ul class="list-inline">
-                  <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-facebook"></i></a></li>
-                  <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-twitter-alt"></i></a></li>
-                  <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-google"></i></a></li>
-                  <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-linkedin"></i></a></li>
-                </ul>
-              </div>
+
+        <!-- Page Title -->
+        <div class="row">
+            <div class="col-12">
+                <h1 class="main-title">About ITLC</h1>
+                <div class="title-accent"></div>
             </div>
-          </div>
         </div>
-        <!-- teacher -->
-        <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-          <div class="card border-0 rounded-0 hover-shadow">
-            <img class="card-img-top rounded-0" src="images/teachers/teacher-2.jpg" alt="teacher">
-            <div class="card-body">
-              <a href="teacher-single.php">
-                <h4 class="card-title">Clark Malik</h4>
-              </a>
-              <div class="d-flex justify-content-between">
-                <span>Teacher</span>
-                <ul class="list-inline">
-                  <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-facebook"></i></a></li>
-                  <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-twitter-alt"></i></a></li>
-                  <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-google"></i></a></li>
-                  <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-linkedin"></i></a></li>
-                </ul>
-              </div>
+
+        <!-- Introduction -->
+        <div class="row">
+            <div class="col-12">
+                <p>
+                    <strong>The IT Leadership Community (ITLC)</strong>
+                    is a non-profit, non-political organization comprised
+                    of senior IT leaders, including CIOs, CTOs, Heads of
+                    IT, IT Managers, and IT Project Managers. It was
+                    established to create a collaborative platform for
+                    IT professionals to grow together and support each
+                    other in leadership development.
+                </p>
             </div>
-          </div>
         </div>
-        <!-- teacher -->
-        <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-          <div class="card border-0 rounded-0 hover-shadow">
-            <img class="card-img-top rounded-0" src="images/teachers/teacher-3.jpg" alt="teacher">
-            <div class="card-body">
-              <a href="teacher-single.php">
-                <h4 class="card-title">John Doe</h4>
-              </a>
-              <div class="d-flex justify-content-between">
-                <span>Teacher</span>
-                <ul class="list-inline">
-                  <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-facebook"></i></a></li>
-                  <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-twitter-alt"></i></a></li>
-                  <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-google"></i></a></li>
-                  <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-linkedin"></i></a></li>
-                </ul>
-              </div>
+
+        <!-- Vision -->
+        <div class="row content-section">
+            <div class="col-12">
+                <h2 class="section-heading">Our Vision</h2>
+                <p>
+                    ITLC envisions a tech-driven Bangladesh by advancing
+                    and setting standards for the IT profession and
+                    leadership, driving economic growth, and fostering
+                    innovation for a prosperous future.
+                </p>
             </div>
-          </div>
         </div>
-      </div>
+
+        <!-- Mission -->
+        <div class="row content-section">
+            <div class="col-12">
+                <h2 class="section-heading">Our Mission</h2>
+                <p>
+                    Our mission is to empower and elevate the IT
+                    profession by upholding the highest standards of
+                    excellence among members, enabling them to deliver
+                    exceptional services to society.
+                </p>
+                <p>
+                    ITLC focuses on formulating and implementing
+                    technology standards, aligning with global best
+                    practices, and harnessing Bangladesh's human
+                    potential for sustainable progress.
+                </p>
+            </div>
+        </div>
+
+        <!-- Community -->
+        <div class="row content-section">
+            <div class="col-12">
+                <h2 class="section-heading">Our Community</h2>
+                <p>
+                    ITLC welcomes all senior IT professionals in
+                    Bangladesh. Membership in action teams and
+                    participation in events are open to everyone,
+                    regardless of previous involvement. We encourage
+                    broad participation across the IT sector.
+                </p>
+                <p>
+                    The ITLC Executive Committee (EC) strives to create
+                    an open and collaborative environment across the
+                    wider IT community and organizes events to support
+                    members' leadership development.
+                </p>
+            </div>
+        </div>
+
+        <!-- Activities -->
+        <div class="row content-section">
+            <div class="col-12">
+                <h2 class="section-heading">Our Activities</h2>
+                <p>
+                    ITLC promotes professional growth, leadership,
+                    collaboration, and knowledge sharing through
+                    the following initiatives:
+                </p>
+
+                <ul class="activities-list">
+                    <li>Global network expansion among IT leaders.</li>
+                    <li>Supporting IT industry standards and best practices.</li>
+                    <li>Professional development programs.</li>
+                    <li>Job opportunities through the ITLC network.</li>
+                    <li>Mentorship programs.</li>
+                    <li>Real-world experience-sharing sessions.</li>
+                    <li>
+                        Topic-based discussions, including webinars,
+                        workshops, panel discussions, cutting-edge
+                        research, IT conferences, and collaboration.
+                    </li>
+                    <li>Recognition and awards.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Decision Making -->
+        <div class="row content-section">
+            <div class="col-12">
+                <h2 class="section-heading">Decision-Making Process</h2>
+                <p>
+                    Major decisions are finalized through consensus
+                    among Executive Committee (EC) members during
+                    meetings, taking members' opinions into consideration.
+                </p>
+            </div>
+        </div>
+
+        <!-- Call to Action Box -->
+        <div class="row">
+            <div class="col-12">
+                <div class="cta-box">
+                    <h4>Ready to Elevate Your Leadership Journey?</h4>
+                    <p class="text-center">
+                        Join hundreds of senior IT leaders shaping the future of technology in Bangladesh.
+                    </p>
+                    <a href="#" data-toggle="modal" data-target="#signupModal" class="btn btn-primary px-4 py-2 mr-2">
+                        Become a Member
+                    </a>
+                    <a href="membership-criteria.php" class="btn btn-criteria px-4 py-2">
+                        View Membership Criteria
+                    </a>
+                </div>
+            </div>
+        </div>
+
     </div>
-  </section>
-  <!-- /teachers -->
+</section>
 
-
-
-<?php 
-include 'includes/footer.php'; 
+<?php
+include 'includes/footer.php';
 ?>
