@@ -353,7 +353,7 @@
           <div class="card-body">
             <!-- location -->
             <p><i class="ti-location-pin text-primary mr-2"></i>Pan Pacific Sonargaon, Dhaka</p>
-            <a href="event-details-6.php"><h4 class="card-title">Executive Committee Meeting of ITLC</h4></a>
+            <a href="event-single.php?id=6"><h4 class="card-title">Executive Committee Meeting of ITLC</h4></a>
           </div>
         </div>
       </div>
@@ -367,7 +367,7 @@
           <div class="card-body">
             <!-- location -->
             <p><i class="ti-location-pin text-primary mr-2"></i>Pan Pacific Sonargaon, Dhaka</p>
-            <a href="event-details-5.php"><h4 class="card-title">Executive Committee Meeting of ITLC</h4></a>
+            <a href="event-single.php?id=5"><h4 class="card-title">Executive Committee Meeting of ITLC</h4></a>
           </div>
         </div>
       </div>
@@ -381,7 +381,7 @@
           <div class="card-body">
             <!-- location -->
             <p><i class="ti-location-pin text-primary mr-2"></i>Pan Pacific Sonargaon, Dhaka</p>
-            <a href="event-details-4.php"><h4 class="card-title">Executive Committee Meeting of ITLC</h4></a>
+            <a href="event-single.php?id=4"><h4 class="card-title">Executive Committee Meeting of ITLC</h4></a>
           </div>
         </div>
       </div>
@@ -396,7 +396,7 @@
 </section>
 <!-- /events -->
 
-<!-- blog -->
+<!-- news -->
 <section class="section">
   <div class="container">
     <div class="row">
@@ -405,82 +405,67 @@
           <h3 class="mb-0 text-nowrap mr-3">Latest News</h3>
           <div class="border-top w-100 border-primary d-none d-sm-block"></div>
           <div>
-            <a href="blog.php" class="btn btn-sm btn-primary-outline ml-sm-3 d-none d-sm-block">see all</a>
+            <a href="news.php" class="btn btn-sm btn-primary-outline ml-sm-3 d-none d-sm-block">see all</a>
           </div>
         </div>
       </div>
     </div>
     <div class="row justify-content-center">
-      <!-- blog post -->
-      <article class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-        <div class="card rounded border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
-          <img class="card-img-top rounded-top" src="images/blog/post-1.jpg" alt="Post thumb">
+      <!-- news 6 -->
+      <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+        <div class="card border-0 rounded hover-shadow">
+          <div class="card-img position-relative">
+            <img class="card-img-top rounded-top" src="images/news/news-6.jpg" alt="news thumb">
+          </div>
           <div class="card-body">
-            <!-- post meta -->
-            <ul class="list-inline mb-3">
-              <!-- post date -->
-              <li class="list-inline-item mr-3 ml-0">August 28, 2019</li>
-              <!-- author -->
-              <li class="list-inline-item mr-3 ml-0">By Jonathon</li>
-            </ul>
-            <a href="blog-single.php">
-              <h4 class="card-title">The Expenses You Are Thinking.</h4>
-            </a>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicin</p>
-            <a href="blog-single.php" class="btn btn-primary btn-sm">read more</a>
+            <p class="mb-2" style="font-size: 13px; color: #555;">
+              <span class="mr-3"><i class="ti-user text-primary mr-1"></i>By Alex Pitt</span>
+              <span><i class="ti-calendar text-primary mr-1"></i>24 August 2025</span>
+            </p>
+            <a href="news-single.php?id=6"><h4 class="card-title">The Changing Scenario in Tech & Digital Ecosystem</h4></a>
           </div>
         </div>
-      </article>
-      <!-- blog post -->
-      <article class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-        <div class="card rounded border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
-          <img class="card-img-top rounded-top" src="images/blog/post-2.jpg" alt="Post thumb">
+      </div>
+      <!-- news 5 -->
+      <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+        <div class="card border-0 rounded hover-shadow">
+          <div class="card-img position-relative">
+            <img class="card-img-top rounded-top" src="images/news/news-5.jpg" alt="news thumb">
+          </div>
           <div class="card-body">
-            <!-- post meta -->
-            <ul class="list-inline mb-3">
-              <!-- post date -->
-              <li class="list-inline-item mr-3 ml-0">August 13, 2019</li>
-              <!-- author -->
-              <li class="list-inline-item mr-3 ml-0">By Jonathon Drew</li>
-            </ul>
-            <a href="blog-single.php">
-              <h4 class="card-title">Tips to Succeed in an Online Course</h4>
-            </a>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicin</p>
-            <a href="blog-single.php" class="btn btn-primary btn-sm">read more</a>
+            <p class="mb-2" style="font-size: 13px; color: #555;">
+              <span class="mr-3"><i class="ti-user text-primary mr-1"></i>By Jonathon Drew</span>
+              <span><i class="ti-calendar text-primary mr-1"></i>13 August 2025</span>
+            </p>
+            <a href="news-single.php?id=5"><h4 class="card-title">Completion of Projects Before the Deadline</h4></a>
           </div>
         </div>
-      </article>
-      <!-- blog post -->
-      <article class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-        <div class="card rounded border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
-          <img class="card-img-top rounded-top" src="images/blog/post-3.jpg" alt="Post thumb">
+      </div>
+      <!-- news 4 -->
+      <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+        <div class="card border-0 rounded hover-shadow">
+          <div class="card-img position-relative">
+            <img class="card-img-top rounded-top" src="images/news/news-4.jpg" alt="news thumb">
+          </div>
           <div class="card-body">
-            <!-- post meta -->
-            <ul class="list-inline mb-3">
-              <!-- post date -->
-              <li class="list-inline-item mr-3 ml-0">August 24, 2018</li>
-              <!-- author -->
-              <li class="list-inline-item mr-3 ml-0">By Alex Pitt</li>
-            </ul>
-            <a href="blog-single.php">
-              <h4 class="card-title">Orientation Program for the new students</h4>
-            </a>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicin</p>
-            <a href="blog-single.php" class="btn btn-primary btn-sm">read more</a>
+            <p class="mb-2" style="font-size: 13px; color: #555;">
+              <span class="mr-3"><i class="ti-user text-primary mr-1"></i>By Somrat Sorkar</span>
+              <span><i class="ti-calendar text-primary mr-1"></i>28 August 2025</span>
+            </p>
+            <a href="news-single.php?id=4"><h4 class="card-title">Enrolling New Members into the ITLC Network</h4></a>
           </div>
         </div>
-      </article>
+      </div>
     </div>
     <!-- mobile see all button -->
     <div class="row">
       <div class="col-12 text-center">
-        <a href="blog.php" class="btn btn-sm btn-primary-outline d-sm-none d-inline-block">see all</a>
+        <a href="news.php" class="btn btn-sm btn-primary-outline d-sm-none d-inline-block">see all</a>
       </div>
     </div>
   </div>
 </section>
-<!-- /blog -->
+<!-- /news -->
 
 <!-- our members -->
 <section class="section bg-gray">

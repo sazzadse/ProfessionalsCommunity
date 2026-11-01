@@ -14,7 +14,7 @@ footer.bg-footer a:hover i { color: #ffbc3b !important; text-decoration: none; }
         <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
           <!-- logo -->
           <a class="logo-footer d-block mb-4" href="index.php">
-            <img class="img-fluid" src="images/logo.png" alt="logo" style="max-height: 80px; width: auto;">
+            <img class="img-fluid" src="images/logo/logo_footer.png" alt="logo" style="height: 110px; width: 160px;">
           </a>
           <ul class="list-unstyled">
             <li class="mb-2 text-lighten">23621 15 Mile Rd #C104, Clinton MI, 48035, New York, USA</li>
@@ -29,7 +29,7 @@ footer.bg-footer a:hover i { color: #ffbc3b !important; text-decoration: none; }
           <ul class="list-unstyled">
             <li class="mb-3"><a class="text-lighten" href="about.php">About Us</a></li>
             <li class="mb-3"><a class="text-lighten" href="contact.php">Contact</a></li>
-            <li class="mb-3"><a class="text-lighten" href="blog.php">Blog</a></li>
+            <li class="mb-3"><a class="text-lighten" href="news.php">News</a></li>
             <li class="mb-3"><a class="text-lighten" href="member.php">Members</a></li>
           </ul>
         </div>

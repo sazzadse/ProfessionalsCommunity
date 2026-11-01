@@ -77,7 +77,7 @@
           <div class="card-body">
             <!-- location -->
             <p><i class="ti-location-pin text-primary mr-2"></i>Pan Pacific Sonargaon, Dhaka</p>
-            <a href="event-details-6.php"><h4 class="card-title">Executive Committee Meeting of ITLC</h4></a>
+            <a href="event-single.php?id=6"><h4 class="card-title">Executive Committee Meeting of ITLC</h4></a>
           </div>
         </div>
       </div>
@@ -92,13 +92,13 @@
           <div class="card-body">
             <!-- location -->
             <p><i class="ti-location-pin text-primary mr-2"></i>Pan Pacific Sonargaon, Dhaka</p>
-            <a href="event-details-5.php">
+            <a href="event-single.php?id=5">
               <h4 class="card-title">Executive Committee Meeting of ITLC</h4>
             </a>
           </div>
         </div>
       </div>
-      <!-- event -->
+      <!-- event 4 -->
       <div class="col-lg-4 col-sm-6 mb-4">
         <div class="card border-0 rounded-0 hover-shadow">
           <div class="card-img position-relative">
@@ -108,13 +108,13 @@
           <div class="card-body">
             <!-- location -->
             <p><i class="ti-location-pin text-primary mr-2"></i>Pan Pacific Sonargaon, Dhaka</p>
-            <a href="event-details-4.php">
+            <a href="event-single.php?id=4">
               <h4 class="card-title">Executive Committee Meeting of ITLC</h4>
             </a>
           </div>
         </div>
       </div>
-      <!-- event -->
+      <!-- event 3 -->
       <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
         <div class="card border-0 rounded-0 hover-shadow">
           <div class="card-img position-relative">
@@ -124,13 +124,13 @@
           <div class="card-body">
             <!-- location -->
             <p><i class="ti-location-pin text-primary mr-2"></i>Pan Pacific Sonargaon, Dhaka</p>
-            <a href="event-details-3.php">
+            <a href="event-single.php?id=3">
               <h4 class="card-title">Executive Committee Meeting of ITLC</h4>
             </a>
           </div>
         </div>
       </div>
-      <!-- event -->
+      <!-- event 2 -->
       <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
         <div class="card border-0 rounded-0 hover-shadow">
           <div class="card-img position-relative">
@@ -140,13 +140,13 @@
           <div class="card-body">
             <!-- location -->
             <p><i class="ti-location-pin text-primary mr-2"></i>Pan Pacific Sonargaon, Dhaka</p>
-            <a href="event-details-2.php">
+            <a href="event-single.php?id=2">
               <h4 class="card-title">Executive Committee Meeting of ITLC</h4>
             </a>
           </div>
         </div>
       </div>
-      <!-- event -->
+      <!-- event 1 -->
       <div class="col-lg-4 col-sm-6 mb-0">
         <div class="card border-0 rounded-0 hover-shadow">
           <div class="card-img position-relative">
@@ -156,7 +156,7 @@
           <div class="card-body">
             <!-- location -->
             <p><i class="ti-location-pin text-primary mr-2"></i>Pan Pacific Sonargaon, Dhaka</p>
-            <a href="event-details-1.php">
+            <a href="event-single.php?id=1">
               <h4 class="card-title">Executive Committee Meeting of ITLC</h4>
             </a>
           </div>

@@ -1,10 +1,64 @@
 <?php 
-  // Set variables specific to this page
-  $page_title = "Executive Committee Meeting of ITLC - IT Leadership Community";
-  $current_page = "events";
-
   // Include configuration
   include 'includes/config.php';
+
+  $events_data = [
+      6 => [
+          'title' => 'Executive Committee Meeting of ITLC',
+          'date' => '12 September 2026',
+          'location' => 'Pan Pacific Sonargaon, Dhaka',
+          'time' => '07: 00 pm',
+          'entry_fee' => 'From: 1000 BDT',
+          'image' => 'images/events/event-details-6.jpg',
+      ],
+      5 => [
+          'title' => 'Executive Committee Meeting of ITLC',
+          'date' => '15 Jun 2026',
+          'location' => 'Pan Pacific Sonargaon, Dhaka',
+          'time' => '07: 00 pm',
+          'entry_fee' => 'From: 1000 BDT',
+          'image' => 'images/events/event-details-5.jpg',
+      ],
+      4 => [
+          'title' => 'Executive Committee Meeting of ITLC',
+          'date' => '20 April 2026',
+          'location' => 'Pan Pacific Sonargaon, Dhaka',
+          'time' => '07: 00 pm',
+          'entry_fee' => 'From: 1000 BDT',
+          'image' => 'images/events/event-details-4.jpg',
+      ],
+      3 => [
+          'title' => 'Executive Committee Meeting of ITLC',
+          'date' => '05 January 2026',
+          'location' => 'Pan Pacific Sonargaon, Dhaka',
+          'time' => '07: 00 pm',
+          'entry_fee' => 'From: 1000 BDT',
+          'image' => 'images/events/event-details-3.jpg',
+      ],
+      2 => [
+          'title' => 'Executive Committee Meeting of ITLC',
+          'date' => '19 October 2025',
+          'location' => 'Pan Pacific Sonargaon, Dhaka',
+          'time' => '07: 00 pm',
+          'entry_fee' => 'From: 1000 BDT',
+          'image' => 'images/events/event-details-2.jpg',
+      ],
+      1 => [
+          'title' => 'Executive Committee Meeting of ITLC',
+          'date' => '10 October 2025',
+          'location' => 'Pan Pacific Sonargaon, Dhaka',
+          'time' => '07: 00 pm',
+          'entry_fee' => 'From: 1000 BDT',
+          'image' => 'images/events/event-details-1.jpg',
+      ],
+  ];
+
+  $id = isset($_GET['id']) && isset($events_data[$_GET['id']]) ? (int)$_GET['id'] : 6;
+  $current_event = $events_data[$id];
+
+  $page_title = $current_event['title'] . " - IT Leadership Community";
+  $current_page = "events";
+
   include 'includes/header.php';
 ?>
 
@@ -93,7 +147,7 @@
         <h1 class="main-title">
           <a href="events.php" class="event-breadcrumb-link">Events</a>
           <span class="event-breadcrumb-separator">&gt;</span>
-          <span style="color: #06487a; font-size: 20px;">Executive Committee Meeting of ITLC</span>
+          <span style="color: #06487a; font-size: 20px;"><?php echo htmlspecialchars($current_event['title']); ?></span>
         </h1>
         <div class="title-accent"></div>
       </div>
@@ -103,7 +157,7 @@
     <div class="row">
       <!-- event image -->
       <div class="col-12 mb-4">
-        <img src="images/events/event-details-6.jpg" alt="event thumb" class="img-fluid w-100">
+        <img src="<?php echo htmlspecialchars($current_event['image']); ?>" alt="event thumb" class="img-fluid w-100">
       </div>
     </div>
     <!-- event info -->
@@ -115,7 +169,7 @@
               <i class="ti-location-pin text-primary icon-md mr-2"></i>
               <div class="text-left">
                 <h6 class="mb-0">LOCATION</h6>
-                <p class="mb-0">Pan Pacific Sonargaon, Dhaka</p>
+                <p class="mb-0"><?php echo htmlspecialchars($current_event['location']); ?></p>
               </div>
             </div>
           </li>
@@ -124,7 +178,7 @@
               <i class="ti-calendar text-primary icon-md mr-2"></i>
               <div class="text-left">
                 <h6 class="mb-0">DATE</h6>
-                <p class="mb-0">12 September 2026</p>
+                <p class="mb-0"><?php echo htmlspecialchars($current_event['date']); ?></p>
               </div>
             </div>
           </li>
@@ -133,7 +187,7 @@
               <i class="ti-time text-primary icon-md mr-2"></i>
               <div class="text-left">
                 <h6 class="mb-0">TIME</h6>
-                <p class="mb-0">07: 00 pm</p>
+                <p class="mb-0"><?php echo htmlspecialchars($current_event['time']); ?></p>
               </div>
             </div>
           </li>
@@ -142,7 +196,7 @@
               <i class="ti-wallet text-primary icon-md mr-2"></i>
               <div class="text-left">
                 <h6 class="mb-0">ENTRY FEE</h6>
-                <p class="mb-0">From: 1000 BDT</p>
+                <p class="mb-0"><?php echo htmlspecialchars($current_event['entry_fee']); ?></p>
               </div>
             </div>
           </li>

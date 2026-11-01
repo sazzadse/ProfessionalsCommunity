@@ -207,7 +207,7 @@ textarea.form-control-profile {
     <div class="row">
       <div class="col-12">
         <div class="d-flex justify-content-between align-items-center mb-3">
-          <h3 class="font-weight-bold text-dark m-0">Update Your Member Account...</h3>
+          <h3 class="font-weight-bold m-0" style="color: #ffbc3b;">Update Your Member Account...</h3>
           <a href="member-profile.php" class="btn btn-primary-outline btn-sm text-uppercase font-weight-bold px-3 py-1"><i class="ti-arrow-left mr-1"></i> Back to Profile</a>
         </div>
         <hr class="mt-0 mb-4" style="border-top: 1px solid #e5e5e5;">

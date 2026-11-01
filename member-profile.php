@@ -57,27 +57,120 @@ if (!empty($user_data['image'])) {
 }
 ?>
 
-<!-- page title -->
-<section class="page-title-section overlay" data-background="images/backgrounds/page-title.jpg">
+<style>
+    .itlc-about {
+        padding: 170px 0 60px;
+        color: #06487a;
+    }
+
+    .itlc-about h1 {
+        color: #ffbc3b;
+    }
+
+    .itlc-about h2,
+    .itlc-about h3,
+    .itlc-about h4,
+    .itlc-about p,
+    .itlc-about li,
+    .itlc-about strong {
+        color: #06487a;
+    }
+
+    /* Main Title */
+    .itlc-about .main-title {
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 1.4;
+        margin: 0 0 12px;
+    }
+
+    .itlc-about .member-breadcrumb-link {
+        color: #ffbc3b;
+        text-decoration: none !important;
+        cursor: pointer;
+    }
+
+    .itlc-about .member-breadcrumb-link:hover,
+    .itlc-about .member-breadcrumb-link:focus,
+    .itlc-about .member-breadcrumb-link:active {
+        color: #ffbc3b !important;
+        text-decoration: none !important;
+    }
+
+    .itlc-about .member-breadcrumb-separator {
+        color: #06487a;
+        font-weight: 400;
+        margin: 0 10px;
+        font-size: 22px;
+    }
+
+    /* Title Underline */
+    .itlc-about .title-accent {
+        width: 45px;
+        height: 3px;
+        background: #06487a;
+        border-radius: 2px;
+        margin-bottom: 25px;
+    }
+
+    .itlc-about .profile-intro-text {
+        font-size: 15px;
+        line-height: 1.7;
+        color: #06487a;
+    }
+
+    .itlc-about a.text-color:hover {
+        color: #ffbc3b !important;
+    }
+
+    .btn-update-orange {
+        background-color: #ee6435;
+        color: #ffffff;
+        border: none;
+        border-radius: 2px;
+        padding: 8px 30px;
+        font-weight: 600;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+    .btn-update-orange:hover {
+        background-color: #d95328;
+        color: #ffffff;
+    }
+
+    @media (max-width: 767px) {
+        .itlc-about {
+            padding: 120px 0 40px;
+        }
+
+        .itlc-about .main-title {
+            font-size: 20px;
+        }
+
+        .itlc-about .member-breadcrumb-separator {
+            margin: 0 6px;
+            font-size: 18px;
+        }
+    }
+</style>
+
+<section class="itlc-about">
   <div class="container">
+
+    <!-- Page Header -->
     <div class="row">
-      <div class="col-md-8">
-        <ul class="list-inline custom-breadcrumb">
-          <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="member.php">Our Member</a></li>
-          <li class="list-inline-item text-white h3 font-secondary nasted">Members Details</li>
-        </ul>
-        <p class="text-lighten">
+      <div class="col-12">
+        <h1 class="main-title">
+          <a href="member.php" class="member-breadcrumb-link">Our Member</a>
+          <span class="member-breadcrumb-separator">&gt;</span>
+          <span style="color: #06487a;">Members Details</span>
+        </h1>
+        <div class="title-accent"></div>
+        <p class="profile-intro-text mb-4">
           An experienced tech leader driven by innovation and strategic digital transformation. Committed to empowering teams, bridging business with technology, and shaping the future of IT leadership.
         </p>
       </div>
     </div>
-  </div>
-</section>
-<!-- /page title -->
-
-<!-- member details -->
-<section class="section bg-white pt-5 pb-5">
-  <div class="container">
 
     <!-- Session Alerts -->
     <?php if (isset($_SESSION['error'])): ?>
@@ -222,7 +315,7 @@ if (!empty($user_data['image'])) {
     </div>
   </div>
 </section>
-<!-- /member details -->
+<!-- /itlc-about -->
 
 <!-- Change Image Modal -->
 <div class="modal fade" id="changeImageModal" tabindex="-1" role="dialog" aria-labelledby="changeImageModalLabel" aria-hidden="true">
