@@ -67,7 +67,19 @@
 
     // venobox popup
     $(document).ready(function(){
-        $('.venobox').venobox(); 
+        $('.venobox').venobox({
+            numeratio: true,
+            infinigall: true,
+            titleattr: 'data-title',
+            overlayColor: 'rgba(6, 72, 122, 0.90)',
+            arrowsColor: '#ffbc3b',
+            closeColor: '#ffffff',
+            closeBackground: '#06487a',
+            numerationColor: '#ffffff',
+            numerationBackground: '#06487a',
+            titleColor: '#ffffff',
+            titleBackground: 'rgba(6, 72, 122, 0.95)'
+        }); 
     });
 
     

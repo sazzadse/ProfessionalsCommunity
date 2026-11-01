@@ -130,7 +130,7 @@ $base_url   = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https:/
                     <a class="dropdown-item" href="<?php echo $base_url; ?>/professional-guidelines.php">Professional Guidelines</a>
                 </div>
             </li>
-            <li class="nav-item dropdown view">
+            <li class="nav-item dropdown view <?php echo in_array($current_page, ['events', 'news', 'photo-gallery']) ? 'active' : ''; ?>">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
                     Media Center
@@ -138,7 +138,7 @@ $base_url   = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https:/
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="<?php echo $base_url; ?>/events.php">Events</a>
                     <a class="dropdown-item" href="<?php echo $base_url; ?>/news.php">News</a>
-                    <a class="dropdown-item" href="<?php echo $base_url; ?>/notice.php">Photo Gallery</a>
+                    <a class="dropdown-item" href="<?php echo $base_url; ?>/photo-gallery.php">Photo Gallery</a>
                 </div>
             </li>
             <li class="nav-item <?php echo $current_page == 'contact' ? 'active' : ''; ?>">

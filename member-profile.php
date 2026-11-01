@@ -39,7 +39,8 @@ if (!$user_data) {
     exit;
 }
 
-$is_own_profile = (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true && !empty($_SESSION['user_id']) && $_SESSION['user_id'] == $target_user_id);
+$is_logged_in = (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true && !empty($_SESSION['user_id']));
+$is_own_profile = ($is_logged_in && $_SESSION['user_id'] == $target_user_id);
 $page_title = $user_data['full_name'] . " - Member Profile";
 
 // Determine profile picture path
@@ -205,10 +206,6 @@ if (!empty($user_data['image'])) {
           <button type="button" class="btn btn-primary-outline btn-block rounded-0 font-weight-bold text-uppercase" data-toggle="modal" data-target="#changeImageModal" style="font-size: 13px; padding: 7px 10px;">
             <i class="ti-image mr-1"></i> CHANGE IMAGE
           </button>
-        <?php else: ?>
-          <a href="member.php" class="btn btn-primary-outline btn-block rounded-0 font-weight-bold text-uppercase" style="font-size: 13px; padding: 7px 10px;">
-            <i class="ti-arrow-left mr-1"></i> BACK TO MEMBERS
-          </a>
         <?php endif; ?>
       </div>
       <!-- Member Details Column -->
@@ -265,14 +262,14 @@ if (!empty($user_data['image'])) {
               <?php if(!empty($user_data['facebook_url'])): ?>
                 <li class="list-inline-item mr-2"><a href="<?php echo htmlspecialchars($user_data['facebook_url']); ?>" style="font-size: 16px; color:#1877F2;"><i class="ti-facebook"></i></a></li>
               <?php endif; ?>
-              <?php if(!empty($user_data['youtube_url'])): ?>
-                <li class="list-inline-item mr-2"><a href="<?php echo htmlspecialchars($user_data['youtube_url']); ?>" style="font-size: 16px; color:#FF0033;"><i class="ti-youtube"></i></a></li>
-              <?php endif; ?>
               <?php if(!empty($user_data['twitter_url'])): ?>
-                <li class="list-inline-item mr-2"><a href="<?php echo htmlspecialchars($user_data['twitter_url']); ?>" style="font-size: 16px; color:#1DA1F2;"><i class="ti-twitter"></i></a></li>
+                <li class="list-inline-item mr-2"><a href="<?php echo htmlspecialchars($user_data['twitter_url']); ?>" style="font-size: 16px; color:#1DA1F2;"><i class="ti-twitter-alt"></i></a></li>
               <?php endif; ?>
               <?php if(!empty($user_data['linkedin_url'])): ?>
                 <li class="list-inline-item mr-2"><a href="<?php echo htmlspecialchars($user_data['linkedin_url']); ?>" style="font-size: 16px; color:#0A66C2;"><i class="ti-linkedin"></i></a></li>
+              <?php endif; ?>
+              <?php if(!empty($user_data['youtube_url'])): ?>
+                <li class="list-inline-item mr-2"><a href="<?php echo htmlspecialchars($user_data['youtube_url']); ?>" style="font-size: 16px; color:#FF0033;"><i class="ti-youtube"></i></a></li>
               <?php endif; ?>
             </ul>
           </div>
@@ -283,24 +280,28 @@ if (!empty($user_data['image'])) {
           <div class="col-md-12">
             <h4 class="mb-3">Details:</h4>
             <ul class="list-unstyled">
-              <li class="mb-3">
-                <span class="text-color"><i class="ti-id-badge mr-2"></i>Member ID: <?php echo htmlspecialchars($user_data['membership_id'] ?? 'N/A'); ?></span>
-              </li>
+              <?php if ($is_logged_in): ?>
+                <li class="mb-3">
+                  <span class="text-color"><i class="ti-id-badge mr-2"></i>Member ID: <?php echo htmlspecialchars($user_data['membership_id'] ?? 'N/A'); ?></span>
+                </li>
+              <?php endif; ?>
               <li class="mb-3">
                 <span class="text-color"><i class="ti-briefcase mr-2"></i>Profession: <?php echo htmlspecialchars(!empty($user_data['profession_name']) ? $user_data['profession_name'] : 'N/A'); ?></span>
               </li>
-              <li class="mb-3">
-                <a class="text-color" href="mailto:<?php echo htmlspecialchars($user_data['email'] ?? ''); ?>"><i class="ti-email mr-2"></i>Email: <?php echo htmlspecialchars($user_data['email'] ?? 'N/A'); ?></a>
-              </li>
-              <li class="mb-3">
-                <a class="text-color" href="tel:<?php echo htmlspecialchars($user_data['mobile'] ?? ''); ?>"><i class="ti-mobile mr-2"></i>Phone: <?php echo htmlspecialchars(!empty($user_data['mobile']) ? $user_data['mobile'] : 'N/A'); ?></a>
-              </li>
-              <li class="mb-3">
-                <a class="text-color" href="<?php echo htmlspecialchars($user_data['website_url'] ?? '#'); ?>" target="_blank"><i class="ti-world mr-2"></i>Web: <?php echo htmlspecialchars(!empty($user_data['website_url']) ? $user_data['website_url'] : 'N/A'); ?></a>
-              </li>
-              <li class="mb-3">
-                <span class="text-color"><i class="ti-heart mr-2"></i>Blood Group: <?php echo htmlspecialchars(!empty($user_data['blood_group']) ? $user_data['blood_group'] : 'N/A'); ?></span>
-              </li>
+              <?php if ($is_logged_in): ?>
+                <li class="mb-3">
+                  <a class="text-color" href="mailto:<?php echo htmlspecialchars($user_data['email'] ?? ''); ?>"><i class="ti-email mr-2"></i>Email: <?php echo htmlspecialchars($user_data['email'] ?? 'N/A'); ?></a>
+                </li>
+                <li class="mb-3">
+                  <a class="text-color" href="tel:<?php echo htmlspecialchars($user_data['mobile'] ?? ''); ?>"><i class="ti-mobile mr-2"></i>Phone: <?php echo htmlspecialchars(!empty($user_data['mobile']) ? $user_data['mobile'] : 'N/A'); ?></a>
+                </li>
+                <li class="mb-3">
+                  <a class="text-color" href="<?php echo htmlspecialchars($user_data['website_url'] ?? '#'); ?>" target="_blank"><i class="ti-world mr-2"></i>Web: <?php echo htmlspecialchars(!empty($user_data['website_url']) ? $user_data['website_url'] : 'N/A'); ?></a>
+                </li>
+                <li class="mb-3">
+                  <span class="text-color"><i class="ti-heart mr-2"></i>Blood Group: <?php echo htmlspecialchars(!empty($user_data['blood_group']) ? $user_data['blood_group'] : 'N/A'); ?></span>
+                </li>
+              <?php endif; ?>
               <li class="mb-3">
                 <span class="text-color"><i class="ti-calendar mr-2"></i>Joining Date: <?php echo !empty($user_data['created_at']) ? date('d F Y', strtotime($user_data['created_at'])) : 'N/A'; ?></span>
               </li>

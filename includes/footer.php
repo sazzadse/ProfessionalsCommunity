@@ -40,7 +40,7 @@ footer.bg-footer a:hover i { color: #ffbc3b !important; text-decoration: none; }
             <li class="mb-3"><a class="text-lighten" href="courses.php">Courses</a></li>
             <li class="mb-3"><a class="text-lighten" href="events.php">Events</a></li>
             <li class="mb-3"><a class="text-lighten" href="research.php">Research</a></li>
-            <li class="mb-3"><a class="text-lighten" href="notice.php">Notice</a></li>
+            <li class="mb-3"><a class="text-lighten" href="photo-gallery.php">Photo Gallery</a></li>
           </ul>
         </div>
         <!-- support -->
@@ -80,10 +80,10 @@ footer.bg-footer a:hover i { color: #ffbc3b !important; text-decoration: none; }
         </div>
         <div class="col-sm-5 text-sm-right text-center">
           <ul class="list-inline social-icons">
-            <li class="list-inline-item"><a class="text-lighten d-inline-block p-2" href="https://www.facebook.com/themefisher"><i class="ti-facebook"></i></a></li>
-            <li class="list-inline-item"><a class="text-lighten d-inline-block p-2" href="https://www.twitter.com/themefisher"><i class="ti-twitter-alt"></i></a></li>
-            <li class="list-inline-item"><a class="text-lighten d-inline-block p-2" href="#"><i class="ti-instagram"></i></a></li>
-            <li class="list-inline-item"><a class="text-lighten d-inline-block p-2" href="https://dribbble.com/themefisher"><i class="ti-dribbble"></i></a></li>
+            <li class="list-inline-item"><a class="text-lighten d-inline-block p-2" href="#"><i class="ti-facebook"></i></a></li>
+            <li class="list-inline-item"><a class="text-lighten d-inline-block p-2" href="#"><i class="ti-twitter-alt"></i></a></li>
+            <li class="list-inline-item"><a class="text-lighten d-inline-block p-2" href="#"><i class="ti-linkedin"></i></a></li>
+            <li class="list-inline-item"><a class="text-lighten d-inline-block p-2" href="#"><i class="ti-youtube"></i></a></li>
           </ul>
         </div>
       </div>
@@ -101,7 +101,7 @@ footer.bg-footer a:hover i { color: #ffbc3b !important; text-decoration: none; }
 <!-- aos -->
 <script src="<?php echo $base_url; ?>/plugins/aos/aos.js"></script>
 <!-- venobox popup -->
-<script src="<?php echo $base_url; ?>/plugins/venobox/venobox.min.js"></script>
+<script src="<?php echo $base_url; ?>/plugins/venobox/venobox.min.js?v=<?php echo file_exists(__DIR__ . '/../plugins/venobox/venobox.min.js') ? filemtime(__DIR__ . '/../plugins/venobox/venobox.min.js') : time(); ?>"></script>
 <!-- mixitup filter -->
 <script src="<?php echo $base_url; ?>/plugins/mixitup/mixitup.min.js"></script>
 <!-- google map -->
@@ -109,7 +109,7 @@ footer.bg-footer a:hover i { color: #ffbc3b !important; text-decoration: none; }
 <script src="<?php echo $base_url; ?>/plugins/google-map/gmap.js"></script>
 
 <!-- Main Script -->
-<script src="<?php echo $base_url; ?>/js/script.js"></script>
+<script src="<?php echo $base_url; ?>/js/script.js?v=<?php echo file_exists(__DIR__ . '/../js/script.js') ? filemtime(__DIR__ . '/../js/script.js') : time(); ?>"></script>
 
 </body>
 </html>
