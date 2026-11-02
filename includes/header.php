@@ -142,7 +142,7 @@ $base_url   = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https:/
                 </div>
             </li>
             <li class="nav-item <?php echo $current_page == 'contact' ? 'active' : ''; ?>">
-                <a class="nav-link" href="<?php echo $base_url; ?>/contact.php">Contact</a>
+                <a class="nav-link" href="<?php echo $base_url; ?>/contact.php">Contact Us</a>
             </li>
           </ul>
         </div>

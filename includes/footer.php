@@ -228,10 +228,10 @@
               <i class="ti-location-pin text-warning mr-2"></i>Dhaka, Bangladesh
             </li>
             <li class="mb-2">
-              <i class="ti-mobile text-warning mr-2"></i>Telephone: <a href="tel:+8801710817997">+8801710817997</a>
+              <i class="ti-mobile text-warning mr-2"></i>Phone: <a href="tel:+8801710817997">+8801710817997</a>
             </li>
             <li class="mb-2">
-              <i class="ti-email text-warning mr-2"></i>Email: <a href="mailto:fokrulislamrasel@gmail.com">fokrulislamrasel@gmail.com</a>
+              <i class="ti-email text-warning mr-2"></i><a href="mailto:fokrulislamrasel@gmail.com">fokrulislamrasel@gmail.com</a>
             </li>
           </ul>
         </div>

@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                  . "If you did not request a password reset, please ignore this email.\n\n"
                  . "Best regards,\nITLC Community Team";
         
-        $headers  = "From: nurulhoq85@gmail.com\r\n";
+        $headers  = "From: fokrulislamrasel@gmail.com\r\n";
         $headers .= "X-Mailer: PHP/" . phpversion();
 
         // Send email via server mail() function

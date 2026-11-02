@@ -1,0 +1,54 @@
+[2026-11-01 11:56:06] From: Test User <testuser@example.com> | Phone: +8801700000000 | Subject: Test Inquiry Subject | Recipient: atlsazzad@gmail.com
+Message: Hello, this is a test message to verify the contact form sending to atlsazzad@gmail.com
+----------------------------------------------------------------------
+[2026-11-01 11:56:56] From: Live Visitor <visitor@example.com> | Phone: 8801710817997 | Subject: General Query | Recipient: atlsazzad@gmail.com
+Message: Hello ITLC
+----------------------------------------------------------------------
+[2026-11-01 12:40:21] From: Md. Sazzad Hossain <sazzad.se@gmail.com> | Phone: 01744453085 | Subject: First Test E-Mail | Recipient: atlsazzad@gmail.com
+Message: test
+----------------------------------------------------------------------
+[2026-11-01 12:52:07] [Channel: LOCAL_LOG_ONLY] From: Tester <tester@example.com> | Recipient: atlsazzad@gmail.com | IP: 127.0.0.1
+Subject: CLI Unit Test
+Body:
+This is a test message
+----------------------------------------------------------------------
+[2026-11-01 12:53:08] [Channel: LOCAL_LOG_ONLY] From: Md. Sazzad Hossain <sazzad.se@gmail.com> | Recipient: atlsazzad@gmail.com | IP: ::1
+Subject: New Inquiry: First Test E-Mail - ITLC Contact Form
+Body:
+You have received a new contact inquiry from the IT Leadership Community (ITLC) website:
+
+--------------------------------------------------
+Name    : Md. Sazzad Hossain
+Email   : sazzad.se@gmail.com
+Phone   : 01744453085
+Subject : First Test E-Mail
+Date    : 01 November 2026, 12:53 PM
+IP      : ::1
+--------------------------------------------------
+
+Message:
+test
+
+--------------------------------------------------
+
+----------------------------------------------------------------------
+[2026-11-01 12:54:25] [Channel: LOCAL_LOG_ONLY] From: Md. Sazzad Hossain <sazzad.se@gmail.com> | Recipient: atlsazzad@gmail.com | IP: ::1
+Subject: New Inquiry: First Test E-Mail - ITLC Contact Form
+Body:
+You have received a new contact inquiry from the IT Leadership Community (ITLC) website:
+
+--------------------------------------------------
+Name    : Md. Sazzad Hossain
+Email   : sazzad.se@gmail.com
+Phone   : 01744453085
+Subject : First Test E-Mail
+Date    : 01 November 2026, 12:54 PM
+IP      : ::1
+--------------------------------------------------
+
+Message:
+First Test E-Mail
+
+--------------------------------------------------
+
+----------------------------------------------------------------------
