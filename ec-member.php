@@ -57,128 +57,48 @@ $top_members       = ($page === 1) ? array_slice($members, 0, 2) : [];
 $subsequent_members = ($page === 1) ? array_slice($members, 2) : $members;
 ?>
 
-<style>
-    .itlc-about {
-        padding: 170px 0 60px;
-        color: #06487a;
-    }
-
-    .itlc-about h1 {
-        color: #ffbc3b;
-    }
-
-    .itlc-about h2,
-    .itlc-about p,
-    .itlc-about strong {
-        color: #06487a;
-    }
-
-    /* Main Title */
-    .itlc-about .main-title {
-        font-size: 25px;
-        font-weight: 700;
-        line-height: 1.4;
-        margin: 0 0 12px;
-    }
-
-    /* Title Underline */
-    .itlc-about .title-accent {
-        width: 45px;
-        height: 3px;
-        background: #06487a;
-        border-radius: 2px;
-        margin-bottom: 25px;
-    }
-
-    /* EC Member Card */
-    .ec-card {
-        background: #fff;
-        border: 1px solid #eef2f5;
-        border-bottom: 1px solid #06487a;
-        transition: all 0.3s ease;
-    }
-
-    .ec-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 25px rgba(6, 72, 122, 0.12);
-    }
-
-    .ec-card-top {
-        border-bottom-color: #ffbc3b;
-    }
-
-    /* EC Title Badge */
-    .ec-badge {
-        display: inline-block;
-        background: transparent;
-        color: #06487a;
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-        padding: 4px 10px;
-        border-radius: 0;
-        border: 2px solid #06487a;
-    }
-
-    .ec-badge-president {
-        border-color: #06487a;
-        color: #06487a;
-    }
-
-    /* Pagination styling matching member.php */
-    .pagination .page-link {
-        color: #06487a;
-    }
-
-    .pagination .page-item.active .page-link {
-        background-color: #06487a;
-        border-color: #06487a;
-        color: #fff;
-    }
-
-    .pagination .page-item .page-link:hover {
-        background-color: #06487a;
-        color: #fff;
-        border-color: #06487a;
-    }
-
-    @media (max-width: 767px) {
-        .itlc-about {
-            padding: 120px 0 40px;
-        }
-
-        .itlc-about .main-title {
-            font-size: 25px;
-        }
-    }
-</style>
-
-<section class="itlc-about">
+<!-- Modern Page Hero Banner -->
+<section class="itlc-page-hero">
     <div class="container">
-
-        <!-- Page Header -->
-        <div class="row">
-            <div class="col-12">
-                <h1 class="main-title">Executive Committee</h1>
-                <div class="title-accent"></div>
-                <p class="mb-4">
-                    The Executive Committee of the IT Leadership Community (ITLC) consists of distinguished technology leaders guiding strategic initiatives, industry collaborations, and community empowerment across Bangladesh.
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <span class="badge badge-pill px-3 py-1 mb-2 font-weight-bold text-uppercase" style="background: rgba(255, 188, 59, 0.2); color: #ffbc3b; font-size: 11px;">
+                    LEADERSHIP TEAM
+                </span>
+                <h1 class="hero-title">Executive Committee</h1>
+                <div class="hero-accent-bar"></div>
+                <p class="hero-subtitle">
+                    The distinguished technology executives guiding strategic initiatives, industry standards, and community empowerment across Bangladesh.
                 </p>
+                <div class="itlc-breadcrumb">
+                    <a href="index.php">Home</a>
+                    <span class="sep">/</span>
+                    <a href="about.php">About Us</a>
+                    <span class="sep">/</span>
+                    <span class="current">Executive Committee</span>
+                </div>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- Main EC Members Directory -->
+<section class="itlc-content-section">
+    <div class="container">
 
         <?php if (empty($members)): ?>
             <div class="text-center py-5">
-                <i class="ti-user text-muted" style="font-size: 60px;"></i>
-                <h5 class="mt-3 text-muted">No Executive Committee members found.</h5>
-                <p class="text-color">Please check back soon as committee profiles are updated.</p>
+                <div class="d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px; border-radius: 50%; background: #f1f5f9; color: #94a3b8; font-size: 28px;">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <h5 class="font-weight-bold mb-1" style="color: #06487a;">No Committee Members Listed</h5>
+                <p class="text-muted small">Committee profiles are currently being synchronized.</p>
             </div>
         <?php else: ?>
 
             <?php
-            // Reusable render helper for an EC member card
-            function renderEcMemberCard($m, $is_top = false) {
+            // Modern reusable render helper for an EC member card
+            function renderModernEcMemberCard($m, $is_top = false) {
                 $img_src = 'images/users/default-avatar.jpg';
                 if (!empty($m['image'])) {
                     if (file_exists(__DIR__ . '/images/users/' . $m['image'])) {
@@ -194,56 +114,54 @@ $subsequent_members = ($page === 1) ? array_slice($members, 2) : $members;
                 $profile_url = 'member-profile.php?id=' . $m['id'];
                 $ec_title    = !empty($m['ec_title']) ? $m['ec_title'] : 'EC Member';
                 ?>
-                <div class="card ec-card <?php echo $is_top ? 'ec-card-top' : ''; ?> rounded-0 h-100 p-3">
-                    <!-- EC Title Badge -->
-                    <div class="mb-2">
-                        <span class="ec-badge <?php echo $is_top ? 'ec-badge-president' : ''; ?>">
-                            <i class="ti-award mr-1"></i><?php echo htmlspecialchars($ec_title); ?>
+                <div class="itlc-card h-100 p-3 p-sm-4 d-flex flex-column" style="<?php echo $is_top ? 'border-top: 4px solid #ffbc3b; background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);' : ''; ?>">
+                    
+                    <!-- Role Pill -->
+                    <div class="mb-3 d-flex align-items-center justify-content-between">
+                        <span class="badge badge-pill px-3 py-1 font-weight-bold" style="<?php echo $is_top ? 'background: rgba(255, 188, 59, 0.2); color: #b45309;' : 'background: rgba(6, 72, 122, 0.08); color: #06487a;'; ?> font-size: 11px;">
+                            <i class="fa-solid fa-award mr-1"></i><?php echo htmlspecialchars($ec_title); ?>
                         </span>
+                        <?php if (!empty($m['membership_id'])): ?>
+                            <span class="text-muted small" style="font-size: 11px;">ID: <?php echo htmlspecialchars($m['membership_id']); ?></span>
+                        <?php endif; ?>
                     </div>
 
-                    <div class="d-flex align-items-start mt-1">
-                        <!-- Circular Image -->
-                        <div class="mr-3 flex-shrink-0">
-                            <a href="<?php echo $profile_url; ?>">
+                    <div class="d-flex align-items-center mt-1">
+                        <!-- Portrait Avatar -->
+                        <div class="mr-3 flex-shrink-0" style="width: <?php echo $is_top ? '84px' : '72px'; ?>; height: <?php echo $is_top ? '84px' : '72px'; ?>; border-radius: 16px; overflow: hidden; background: #f1f5f9; border: 2px solid #e2e8f0;">
+                            <a href="<?php echo $profile_url; ?>" class="d-block w-100 h-100">
                                 <img src="<?php echo htmlspecialchars($img_src); ?>" 
                                      alt="<?php echo htmlspecialchars($m['full_name']); ?>" 
-                                     class="rounded-circle" 
-                                     style="width: 80px; height: 80px; object-fit: cover; border: 2px solid #06487a;">
+                                     class="w-100 h-100" 
+                                     style="object-fit: cover; object-position: top center;">
                             </a>
                         </div>
 
                         <!-- Details -->
-                        <div class="flex-grow-1" style="min-width: 0; overflow-wrap: break-word;">
+                        <div class="flex-grow-1 min-w-0">
                             <!-- Name -->
-                            <a href="<?php echo $profile_url; ?>">
-                                <h5 class="mb-1" style="font-size: 15px; line-height: 1.3; color: #06487a; font-weight: 700;">
-                                    <?php echo htmlspecialchars($m['full_name']); ?>
-                                </h5>
-                            </a>
+                            <h5 class="font-weight-bold mb-1 text-truncate" style="font-size: 16px; color: #06487a;">
+                                <a href="<?php echo $profile_url; ?>" class="text-dark"><?php echo htmlspecialchars($m['full_name']); ?></a>
+                            </h5>
 
                             <!-- Position & Company -->
                             <?php if (!empty($m['position']) || !empty($m['company'])): ?>
-                                <p class="text-color mb-1" style="font-size: 12px; line-height: 1.4;">
+                                <p class="text-muted mb-2 text-truncate" style="font-size: 12.5px; line-height: 1.4;">
                                     <?php echo htmlspecialchars($m['position'] ?? ''); ?>
                                     <?php if (!empty($m['position']) && !empty($m['company'])): ?>
-                                        - 
+                                        <br><span class="text-dark font-weight-bold"><?php echo htmlspecialchars($m['company'] ?? ''); ?></span>
+                                    <?php else: ?>
+                                        <?php echo htmlspecialchars($m['company'] ?? ''); ?>
                                     <?php endif; ?>
-                                    <?php echo htmlspecialchars($m['company'] ?? ''); ?>
-                                </p>
-                            <?php endif; ?>
-
-                            <!-- Member ID -->
-                            <?php if (!empty($m['membership_id'])): ?>
-                                <p class="text-muted mb-2" style="font-size: 11px;">
-                                    <i class="ti-id-badge mr-1"></i><?php echo htmlspecialchars($m['membership_id']); ?>
                                 </p>
                             <?php endif; ?>
 
                             <!-- Full Bio Link -->
-                            <a href="<?php echo $profile_url; ?>" class="btn btn-primary btn-sm py-1 px-3" style="font-size: 11px;">
-                                Full Bio
-                            </a>
+                            <div>
+                                <a href="<?php echo $profile_url; ?>" class="btn btn-gold-sm py-1 px-3" style="font-size: 11.5px;">
+                                    View Full Bio
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -252,48 +170,52 @@ $subsequent_members = ($page === 1) ? array_slice($members, 2) : $members;
             ?>
 
             <?php if ($page === 1 && !empty($top_members)): ?>
-                <!-- Row 1: President & Senior Vice President (Only 2 members in Row 1) -->
-                <div class="row justify-content-center mb-2">
+                <!-- Row 1: Executive Leaders (President & Senior Vice President) -->
+                <div class="row justify-content-center mb-3">
                     <?php foreach ($top_members as $m): ?>
-                        <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
-                            <?php renderEcMemberCard($m, true); ?>
+                        <div class="col-lg-6 col-md-6 mb-4">
+                            <?php renderModernEcMemberCard($m, true); ?>
                         </div>
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>
 
             <?php if (!empty($subsequent_members)): ?>
-                <!-- Subsequent Rows: 3 members per row -->
+                <!-- Subsequent Committee Members: 3 members per row -->
                 <div class="row">
                     <?php foreach ($subsequent_members as $m): ?>
-                        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                            <?php renderEcMemberCard($m, false); ?>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <?php renderModernEcMemberCard($m, false); ?>
                         </div>
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>
 
-            <!-- Pagination -->
+            <!-- Modern Pagination -->
             <?php if ($total_pages > 1): ?>
                 <div class="row mt-4">
                     <div class="col-12">
                         <nav aria-label="EC Members pagination">
                             <ul class="pagination justify-content-center">
                                 <?php if ($page > 1): ?>
-                                    <li class="page-item">
-                                        <a class="page-link" href="ec-member.php?page=<?php echo ($page - 1); ?>">Previous</a>
+                                    <li class="page-item mr-1">
+                                        <a class="page-link rounded-pill px-3" href="ec-member.php?page=<?php echo ($page - 1); ?>">
+                                            <i class="fa-solid fa-chevron-left mr-1 small"></i>Previous
+                                        </a>
                                     </li>
                                 <?php endif; ?>
 
                                 <?php for ($i = 1; $i <= $total_pages; $i++): ?>
-                                    <li class="page-item <?php echo ($i === $page) ? 'active' : ''; ?>">
-                                        <a class="page-link" href="ec-member.php?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+                                    <li class="page-item <?php echo ($i === $page) ? 'active' : ''; ?> mx-1">
+                                        <a class="page-link rounded-circle text-center" style="width: 38px; height: 38px; line-height: 22px;" href="ec-member.php?page=<?php echo $i; ?>"><?php echo $i; ?></a>
                                     </li>
                                 <?php endfor; ?>
 
                                 <?php if ($page < $total_pages): ?>
-                                    <li class="page-item">
-                                        <a class="page-link" href="ec-member.php?page=<?php echo ($page + 1); ?>">Next</a>
+                                    <li class="page-item ml-1">
+                                        <a class="page-link rounded-pill px-3" href="ec-member.php?page=<?php echo ($page + 1); ?>">
+                                            Next<i class="fa-solid fa-chevron-right ml-1 small"></i>
+                                        </a>
                                     </li>
                                 <?php endif; ?>
                             </ul>

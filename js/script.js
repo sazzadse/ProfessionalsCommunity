@@ -19,21 +19,39 @@
         });
     });
 
-    //Hero Slider
+    // Hero Slider (Modern 2026 Active-Indicator Navigation)
     if ($('.hero-slider').length) {
-        $('.hero-slider').slick({
+        var $heroSlider = $('.hero-slider');
+        
+        $heroSlider.slick({
             autoplay: true,
             autoplaySpeed: 6000,
             pauseOnFocus: false,
             pauseOnHover: false,
             infinite: true,
-            arrows: true,
+            arrows: false,
             fade: false,
             speed: 600,
             cssEase: 'ease-in-out',
-            prevArrow: '<button type="button" class="prevArrow"><i class="ti-angle-left"></i></button>',
-            nextArrow: '<button type="button" class="nextArrow"><i class="ti-angle-right"></i></button>',
-            dots: true
+            dots: false
+        });
+
+        // Update custom yellow active slide indicator smoothly
+        $heroSlider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+            var slideCount = slick.slideCount || 4;
+            var translatePercent = nextSlide * 100; // translates active bar by 100% of its width
+            $('#heroActiveIndicator').css('transform', 'translateX(' + translatePercent + '%)');
+        });
+
+        // Click on indicator track to jump directly to target slide
+        $(document).on('click', '.hero-indicator-track', function (e) {
+            var trackWidth = $(this).width();
+            var clickX = e.pageX - $(this).offset().left;
+            var slideCount = $heroSlider.slick('getSlick').slideCount || 4;
+            var targetSlide = Math.floor((clickX / trackWidth) * slideCount);
+            if (targetSlide >= 0 && targetSlide < slideCount) {
+                $heroSlider.slick('slickGoTo', targetSlide);
+            }
         });
     }
 

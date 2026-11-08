@@ -6,223 +6,126 @@ include 'includes/config.php';
 include 'includes/header.php';
 ?>
 
-<style>
-    .itlc-about {
-        padding: 170px 0 60px;
-        color: #06487a;
-    }
-
-    .itlc-about h1 {
-        color: #ffbc3b;
-    }
-
-    .itlc-about h2,
-    .itlc-about p,
-    .itlc-about li,
-    .itlc-about strong {
-        color: #06487a;
-    }
-
-    /* Main Title */
-    .itlc-about .main-title {
-        font-size: 25px;
-        font-weight: 700;
-        line-height: 1.4;
-        margin: 0 0 12px;
-    }
-
-    /* Title Underline */
-    .itlc-about .title-accent {
-        width: 45px;
-        height: 3px;
-        background: #06487a;
-        border-radius: 2px;
-        margin-bottom: 25px;
-    }
-
-    /* Section Subtitle */
-    .itlc-about .section-desc {
-        color: #06487a;
-        font-size: 15px;
-        line-height: 1.8;
-        margin-bottom: 25px;
-    }
-
-    /* Section Headings */
-    .itlc-about .section-heading {
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 1.5;
-        margin: 30px 0 12px;
-    }
-
-    /* Bullet List matching about.php & membership-criteria.php */
-    .itlc-about .guidelines-list {
-        list-style: none;
-        padding: 0;
-        margin: 15px 0 0;
-    }
-
-    .itlc-about .guidelines-list li {
-        position: relative;
-        padding-left: 28px;
-        margin-bottom: 16px;
-        color: #06487a;
-        font-size: 15px;
-        line-height: 1.8;
-        font-weight: 400;
-        text-align: justify;
-    }
-
-    /* Custom Blue Bullet */
-    .itlc-about .guidelines-list li::before {
-        content: "";
-        position: absolute;
-        left: 4px;
-        top: 11px;
-        width: 8px;
-        height: 8px;
-        background: #06487a;
-        border-radius: 50%;
-    }
-
-    /* Note Item */
-    .itlc-about .guidelines-list li.note-item {
-        padding-left: 0;
-        margin-top: 30px;
-        font-size: 14px;
-        font-weight: 600;
-    }
-
-    .itlc-about .guidelines-list li.note-item::before {
-        display: none;
-    }
-
-    /* Green Criteria Button with theme animation */
-    .btn-criteria {
-        background: #28a745;
-        color: #fff;
-    }
-
-    .btn-criteria::before {
-        background: #fff;
-    }
-
-    .btn-criteria:hover {
-        background: #218838;
-        color: #28a745;
-    }
-
-    .btn-criteria:active {
-        background: #28a745 !important;
-        color: #28a745;
-    }
-
-    /* Mobile Responsive */
-    @media (max-width: 767px) {
-        .itlc-about {
-            padding: 120px 0 40px;
-        }
-
-        .itlc-about .main-title {
-            font-size: 25px;
-        }
-
-        .itlc-about .section-heading {
-            font-size: 18px;
-        }
-    }
-</style>
-
-<section class="itlc-about">
+<!-- Modern Page Hero Banner -->
+<section class="itlc-page-hero">
     <div class="container">
-
-        <!-- Page Header -->
-        <div class="row">
-            <div class="col-12">
-                <h1 class="main-title">Professional Guidelines</h1>
-                <div class="title-accent"></div>
-                <p class="section-desc">
-                    The IT Leadership Community (ITLC) is built upon the pillars of mutual trust, professional ethics, peer collaboration, and executive leadership. All members are required to uphold these guidelines to maintain an inspiring, constructive, and dignified professional community.
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <span class="badge badge-pill px-3 py-1 mb-2 font-weight-bold text-uppercase" style="background: rgba(255, 188, 59, 0.2); color: #ffbc3b; font-size: 11px;">
+                    ETHICAL GOVERNANCE
+                </span>
+                <h1 class="hero-title">Professional Guidelines</h1>
+                <div class="hero-accent-bar"></div>
+                <p class="hero-subtitle">
+                    The pillars of mutual trust, professional ethics, executive discretion, and collaborative leadership that govern the IT Leadership Community.
                 </p>
+                <div class="itlc-breadcrumb">
+                    <a href="index.php">Home</a>
+                    <span class="sep">/</span>
+                    <a href="membership-criteria.php">Membership</a>
+                    <span class="sep">/</span>
+                    <span class="current">Guidelines</span>
+                </div>
             </div>
         </div>
+    </div>
+</section>
 
-        <!-- 1. Code of Professional Conduct -->
-        <div class="row">
-            <div class="col-12">
-                <h2 class="section-heading">1. Code of Professional Conduct</h2>
-                <ul class="guidelines-list">
-                    <li>
-                        <strong>Integrity &amp; Ethical Leadership:</strong> Members must adhere to the highest ethical and professional standards in their organizational roles and community engagements, setting a positive precedent for Bangladesh's tech industry.
-                    </li>
-                    <li>
-                        <strong>Mutual Respect &amp; Inclusivity:</strong> Foster an inclusive, polite, and encouraging environment where diverse perspectives and technical viewpoints are respected without prejudice.
-                    </li>
-                    <li>
-                        <strong>Commitment to Excellence:</strong> Promote continuous learning, technological standard-setting, and innovation to support sustainable digital transformation across business and public sectors.
-                    </li>
-                </ul>
-            </div>
-        </div>
+<!-- Guidelines Content Section -->
+<section class="itlc-content-section">
+    <div class="container">
+        
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10">
+                
+                <!-- Introduction -->
+                <div class="itlc-card p-4 p-md-5 mb-5" style="border-left: 5px solid #06487a;">
+                    <h3 class="font-weight-bold mb-3" style="color: #06487a; font-size: 22px;">Executive Code of Conduct</h3>
+                    <p class="text-secondary mb-0" style="font-size: 15px; line-height: 1.8;">
+                        The IT Leadership Community (ITLC) is built upon the pillars of mutual trust, professional ethics, peer collaboration, and executive leadership. All members are required to uphold these guidelines to maintain an inspiring, constructive, and dignified professional community.
+                    </p>
+                </div>
 
-        <!-- 2. Community & Communication Standards -->
-        <div class="row">
-            <div class="col-12">
-                <h2 class="section-heading">2. Community &amp; Communication Standards</h2>
-                <ul class="guidelines-list">
-                    <li>
-                        <strong>Strict Prohibition of Sales &amp; Solicitation:</strong> Unsolicited advertisements, direct sales pitches, vendor promotions, and marketing campaigns are strictly prohibited in all ITLC forums, groups, and events.
-                    </li>
-                    <li>
-                        <strong>Neutrality in Public Discourse:</strong> Discussions, posts, or debates involving religion, partisan politics, external society conflicts, or controversial non-professional topics are strictly forbidden in ITLC channels.
-                    </li>
-                    <li>
-                        <strong>Confidentiality &amp; Data Protection:</strong> Strategic insights, sensitive enterprise architectures, and proprietary experiences shared during closed-door roundtables must remain strictly confidential.
-                    </li>
-                </ul>
-            </div>
-        </div>
+                <!-- 1. Code of Professional Conduct -->
+                <div class="mb-5">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="mr-3 d-flex align-items-center justify-content-center" style="width: 44px; height: 44px; border-radius: 12px; background: rgba(6, 72, 122, 0.08); color: #06487a; font-size: 18px;">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+                        <h4 class="font-weight-bold mb-0" style="color: #06487a; font-size: 20px;">1. Professional Conduct & Ethics</h4>
+                    </div>
 
-        <!-- 3. Collaboration & Mentorship -->
-        <div class="row">
-            <div class="col-12">
-                <h2 class="section-heading">3. Knowledge Sharing &amp; Mentorship</h2>
-                <ul class="guidelines-list">
-                    <li>
-                        <strong>Active Participation:</strong> Members are encouraged to proactively participate in knowledge-sharing sessions, domain working groups, webinars, and panel discussions.
-                    </li>
-                    <li>
-                        <strong>Empowering Emerging Leaders:</strong> Experienced executives are expected to share practical guidance, coach peers, and mentor emerging technology professionals to cultivate future IT leadership.
-                    </li>
-                </ul>
-            </div>
-        </div>
+                    <div class="itlc-card p-4 p-md-5 mb-3">
+                        <h5 class="font-weight-bold mb-2" style="color: #06487a; font-size: 16px;">
+                            <i class="fa-solid fa-circle-check text-success mr-2"></i>Integrity & Ethical Leadership
+                        </h5>
+                        <p class="text-muted small mb-4" style="line-height: 1.8;">
+                            Members must adhere to the highest ethical and professional standards in their organizational roles and community engagements, setting a benchmark precedent for Bangladesh's tech industry.
+                        </p>
 
-        <!-- 4. Policy Enforcement & Compliance -->
-        <div class="row">
-            <div class="col-12">
-                <h2 class="section-heading">4. Policy Enforcement &amp; Governance</h2>
-                <ul class="guidelines-list">
-                    <li>
-                        <strong>Membership Revocation:</strong> Any member found engaging in commercial marketing, policy violations, or conduct prejudicial to ITLC will have their membership revoked upon verified review by the Executive Committee.
-                    </li>
-                    <li>
-                        <strong>Administrative Discretion:</strong> ITLC Administrators reserve the full right to moderate content, remove non-compliant communications, and take corrective measures to protect the community's integrity.
-                    </li>
-                    <li class="note-item">
-                        <strong>*** ITLC Authority reserves the right to amend and update these Professional Guidelines as needed for the continued excellence and governance of the community.</strong>
-                    </li>
-                </ul>
+                        <h5 class="font-weight-bold mb-2" style="color: #06487a; font-size: 16px;">
+                            <i class="fa-solid fa-circle-check text-success mr-2"></i>Mutual Respect & Inclusivity
+                        </h5>
+                        <p class="text-muted small mb-0" style="line-height: 1.8;">
+                            Foster an inclusive, polite, and encouraging environment where diverse perspectives, technical architectures, and leadership styles are respected without prejudice.
+                        </p>
+                    </div>
+                </div>
 
-                <div class="mt-4 pt-2">
-                    <a href="#" data-toggle="modal" data-target="#signupModal" class="btn btn-primary px-4 py-2 mr-2">
-                        Become a Member
+                <!-- 2. Community Protocol -->
+                <div class="mb-5">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="mr-3 d-flex align-items-center justify-content-center" style="width: 44px; height: 44px; border-radius: 12px; background: rgba(255, 188, 59, 0.2); color: #b45309; font-size: 18px;">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h4 class="font-weight-bold mb-0" style="color: #06487a; font-size: 20px;">2. Communication & Discussion Standards</h4>
+                    </div>
+
+                    <div class="itlc-card p-4 p-md-5 mb-3">
+                        <h5 class="font-weight-bold mb-2" style="color: #06487a; font-size: 16px;">
+                            <i class="fa-solid fa-circle-xmark text-danger mr-2"></i>Zero Commercial Solicitation
+                        </h5>
+                        <p class="text-muted small mb-4" style="line-height: 1.8;">
+                            Advertisement &amp; sales-related posts, marketing pitches, vendor campaigns, or commercial offers are strictly prohibited in all ITLC communication channels.
+                        </p>
+
+                        <h5 class="font-weight-bold mb-2" style="color: #06487a; font-size: 16px;">
+                            <i class="fa-solid fa-circle-xmark text-danger mr-2"></i>Neutral & Non-Political Focus
+                        </h5>
+                        <p class="text-muted small mb-0" style="line-height: 1.8;">
+                            Posts related to religion, partisan politics, contradictory social conflicts, or outside associations are not permitted to ensure our focus remains exclusively on technology and leadership development.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3. Policy Enforcement -->
+                <div class="itlc-card p-4 p-md-5 mb-5 bg-surface" style="border-top: 4px solid #ef4444;">
+                    <div class="d-flex align-items-start">
+                        <div class="mr-3 mt-1 text-danger" style="font-size: 26px;">
+                            <i class="fa-solid fa-gavel"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-weight-bold mb-2" style="color: #06487a;">3. Policy Enforcement & Membership Revocation</h4>
+                            <p class="text-muted small mb-3" style="line-height: 1.8;">
+                                If any member engages in sales, marketing, unauthorized data scraping, or disruptive behavior within ITLC, membership status will be formally revoked upon verified reporting by the Executive Committee to preserve community integrity.
+                            </p>
+                            <p class="text-muted small mb-0">
+                                <em>*** The ITLC Authority retains the prerogative to amend and adapt these professional guidelines for the continuous betterment of our community.</em>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action CTA -->
+                <div class="text-center">
+                    <a href="membership-criteria.php" class="btn btn-primary rounded-pill px-5 py-2 mr-2 font-weight-bold">
+                        View Criteria
                     </a>
-                    <a href="membership-criteria.php" class="btn btn-criteria px-4 py-2">
-                        View Membership Criteria
+                    <a href="membership-fee.php" class="btn btn-primary-outline rounded-pill px-4 py-2 font-weight-bold">
+                        Fee Structure
                     </a>
                 </div>
+
             </div>
         </div>
 

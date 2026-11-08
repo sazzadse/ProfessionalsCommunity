@@ -6,317 +6,157 @@ include 'includes/config.php';
 include 'includes/header.php';
 ?>
 
-<style>
-    .itlc-about {
-        padding: 170px 0 60px;
-        color: #06487a;
-    }
-
-    .itlc-about h1 {
-        color: #ffbc3b;
-    }
-
-    .itlc-about h2,
-    .itlc-about p,
-    .itlc-about li,
-    .itlc-about strong {
-        color: #06487a;
-    }
-
-    /* Main Title */
-    .itlc-about .main-title {
-        font-size: 25px;
-        font-weight: 700;
-        line-height: 1.4;
-        margin: 0 0 12px;
-    }
-
-    /* Title Underline */
-    .itlc-about .title-accent {
-        width: 45px;
-        height: 3px;
-        background: #06487a;
-        border-radius: 2px;
-        margin-bottom: 25px;
-    }
-
-    /* Section Subtitle */
-    .itlc-about .section-desc {
-        color: #06487a;
-        font-size: 15px;
-        line-height: 1.8;
-        margin-bottom: 30px;
-    }
-
-    /* Benefit Cards */
-    .benefit-card {
-        background: #fff;
-        border: 1px solid #eef2f5;
-        border-bottom: 2px solid #06487a;
-        border-radius: 6px;
-        padding: 28px 24px;
-        transition: all 0.3s ease;
-        height: 100%;
-    }
-
-    .benefit-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 10px 25px rgba(6, 72, 122, 0.12);
-        border-color: #06487a;
-    }
-
-    .benefit-card .icon-box {
-        width: 52px;
-        height: 52px;
-        background: #f0f7fb;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 18px;
-        color: #06487a;
-        font-size: 22px;
-        transition: all 0.3s ease;
-    }
-
-    .benefit-card:hover .icon-box {
-        background: #06487a;
-        color: #ffbc3b;
-    }
-
-    .benefit-card h4 {
-        color: #06487a;
-        font-size: 17px;
-        font-weight: 700;
-        margin-bottom: 12px;
-        line-height: 1.4;
-    }
-
-    .benefit-card p {
-        color: #555;
-        font-size: 14px;
-        line-height: 1.7;
-        margin-bottom: 0;
-    }
-
-    /* Section Headings */
-    .itlc-about .section-heading {
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 1.5;
-        margin: 35px 0 15px;
-    }
-
-    /* Bullet List matching about.php */
-    .itlc-about .benefits-list {
-        list-style: none;
-        padding: 0;
-        margin: 15px 0 0;
-    }
-
-    .itlc-about .benefits-list li {
-        position: relative;
-        padding-left: 28px;
-        margin-bottom: 12px;
-        color: #06487a;
-        font-size: 15px;
-        line-height: 1.8;
-    }
-
-    .itlc-about .benefits-list li::before {
-        content: "";
-        position: absolute;
-        left: 4px;
-        top: 11px;
-        width: 8px;
-        height: 8px;
-        background: #06487a;
-        border-radius: 50%;
-    }
-
-    /* CTA Box */
-    .cta-box {
-        background: #f8fbfd;
-        border: 1px solid #dbe7f0;
-        border-radius: 6px;
-        padding: 30px;
-        margin-top: 40px;
-        text-align: center;
-    }
-
-    .cta-box h4 {
-        color: #06487a;
-        font-weight: 700;
-        margin-bottom: 10px;
-    }
-
-    .cta-box p {
-        color: #06487a;
-        font-size: 15px;
-        margin-bottom: 20px;
-    }
-
-    /* Green Criteria Button with theme animation */
-    .btn-criteria {
-        background: #28a745;
-        color: #fff;
-    }
-
-    .btn-criteria::before {
-        background: #fff;
-    }
-
-    .btn-criteria:hover {
-        background: #218838;
-        color: #28a745;
-    }
-
-    .btn-criteria:active {
-        background: #28a745 !important;
-        color: #28a745;
-    }
-
-    /* Mobile Responsive */
-    @media (max-width: 767px) {
-        .itlc-about {
-            padding: 120px 0 40px;
-        }
-
-        .itlc-about .main-title {
-            font-size: 25px;
-        }
-
-        .itlc-about .section-heading {
-            font-size: 18px;
-        }
-    }
-</style>
-
-<section class="itlc-about">
+<!-- Modern Page Hero Banner -->
+<section class="itlc-page-hero">
     <div class="container">
-
-        <!-- Page Header -->
-        <div class="row">
-            <div class="col-12">
-                <h1 class="main-title">Member Benefits</h1>
-                <div class="title-accent"></div>
-                <p class="section-desc">
-                    Joining the IT Leadership Community (ITLC) connects you with Bangladesh's premier executive technology network. Experience a dynamic platform dedicated to elevating leadership capabilities, strategic collaboration, and industry impact.
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <span class="badge badge-pill px-3 py-1 mb-2 font-weight-bold text-uppercase" style="background: rgba(255, 188, 59, 0.2); color: #ffbc3b; font-size: 11px;">
+                    EXECUTIVE ADVANTAGE
+                </span>
+                <h1 class="hero-title">Exclusive Member Benefits</h1>
+                <div class="hero-accent-bar"></div>
+                <p class="hero-subtitle">
+                    Accelerating your executive career through peer mentorship, technical frameworks, and nationwide collaboration.
                 </p>
+                <div class="itlc-breadcrumb">
+                    <a href="index.php">Home</a>
+                    <span class="sep">/</span>
+                    <a href="membership-criteria.php">Membership</a>
+                    <span class="sep">/</span>
+                    <span class="current">Benefits</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main Benefits Section -->
+<section class="itlc-content-section">
+    <div class="container">
+        
+        <div class="text-center max-w-2xl mx-auto mb-5">
+            <h3 class="font-weight-bold mb-2" style="color: #06487a; font-size: 26px;">Why Leading CIOs & CTOs Choose ITLC</h3>
+            <p class="text-muted small mb-0">Discover the strategic, operational, and network advantages tailored for technology decision-makers.</p>
+        </div>
+
+        <!-- 6 Benefit Cards Grid -->
+        <div class="row mb-5">
+            
+            <!-- Benefit 1 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="itlc-card h-100 p-4" style="border-top: 4px solid #06487a;">
+                    <div class="mb-3 d-inline-flex align-items-center justify-content-center" style="width: 52px; height: 52px; border-radius: 14px; background: rgba(6, 72, 122, 0.08); color: #06487a; font-size: 22px;">
+                        <i class="fa-solid fa-users-gear"></i>
+                    </div>
+                    <h5 class="font-weight-bold mb-2" style="color: #06487a;">Executive Peer Advisory</h5>
+                    <p class="text-muted small mb-0" style="line-height: 1.7;">
+                        Connect directly with seasoned CIOs, CTOs, and IT directors across telecom, banking, manufacturing, and software sectors to exchange practical problem-solving insights.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Benefit 2 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="itlc-card h-100 p-4" style="border-top: 4px solid #ffbc3b;">
+                    <div class="mb-3 d-inline-flex align-items-center justify-content-center" style="width: 52px; height: 52px; border-radius: 14px; background: rgba(255, 188, 59, 0.2); color: #b45309; font-size: 22px;">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+                    <h5 class="font-weight-bold mb-2" style="color: #06487a;">C-Suite Masterclasses</h5>
+                    <p class="text-muted small mb-0" style="line-height: 1.7;">
+                        Participate in invite-only technical sessions, enterprise architecture workshops, and cybersecurity resilience forums conducted by industry pioneers.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Benefit 3 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="itlc-card h-100 p-4" style="border-top: 4px solid #10b981;">
+                    <div class="mb-3 d-inline-flex align-items-center justify-content-center" style="width: 52px; height: 52px; border-radius: 14px; background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 22px;">
+                        <i class="fa-solid fa-file-shield"></i>
+                    </div>
+                    <h5 class="font-weight-bold mb-2" style="color: #06487a;">Industry Standards & Frameworks</h5>
+                    <p class="text-muted small mb-0" style="line-height: 1.7;">
+                        Gain early access to IT governance benchmarks, standard vendor evaluation checklists, and localized compliance blueprints adapted for Bangladesh.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Benefit 4 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="itlc-card h-100 p-4" style="border-top: 4px solid #6366f1;">
+                    <div class="mb-3 d-inline-flex align-items-center justify-content-center" style="width: 52px; height: 52px; border-radius: 14px; background: rgba(99, 102, 241, 0.15); color: #6366f1; font-size: 22px;">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h5 class="font-weight-bold mb-2" style="color: #06487a;">Executive Placement & Referrals</h5>
+                    <p class="text-muted small mb-0" style="line-height: 1.7;">
+                        Confidential leadership opportunity alerts, C-level board placements, and direct executive endorsements across Bangladesh’s corporate landscape.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Benefit 5 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="itlc-card h-100 p-4" style="border-top: 4px solid #ec4899;">
+                    <div class="mb-3 d-inline-flex align-items-center justify-content-center" style="width: 52px; height: 52px; border-radius: 14px; background: rgba(236, 72, 153, 0.15); color: #ec4899; font-size: 22px;">
+                        <i class="fa-solid fa-mug-hot"></i>
+                    </div>
+                    <h5 class="font-weight-bold mb-2" style="color: #06487a;">Conferences & Coffee Adda</h5>
+                    <p class="text-muted small mb-0" style="line-height: 1.7;">
+                        Enjoy complimentary and prioritized passes to ITLC Annual Summits, Knowledge Exchange dinners, and informal monthly "Coffee Adda" networking assemblies.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Benefit 6 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="itlc-card h-100 p-4" style="border-top: 4px solid #0d5c99;">
+                    <div class="mb-3 d-inline-flex align-items-center justify-content-center" style="width: 52px; height: 52px; border-radius: 14px; background: rgba(13, 92, 153, 0.15); color: #0d5c99; font-size: 22px;">
+                        <i class="fa-solid fa-id-badge"></i>
+                    </div>
+                    <h5 class="font-weight-bold mb-2" style="color: #06487a;">Verified Directory Identity</h5>
+                    <p class="text-muted small mb-0" style="line-height: 1.7;">
+                        Showcase your verified professional credentials, enterprise position, and certifications on the public and internal ITLC Directory.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Detailed Breakdown List -->
+        <div class="itlc-card p-4 p-md-5 mb-5 bg-surface">
+            <h4 class="font-weight-bold mb-3" style="color: #06487a;">Comprehensive Membership Deliverables</h4>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="list-unstyled mb-0 space-y-3 small text-secondary" style="line-height: 1.9;">
+                        <li><i class="fa-solid fa-circle-check text-success mr-2"></i>Global network expansion with international CIO councils.</li>
+                        <li><i class="fa-solid fa-circle-check text-success mr-2"></i>Quarterly research briefings on AI, cloud, and cyber security trends.</li>
+                        <li><i class="fa-solid fa-circle-check text-success mr-2"></i>Active participation in ITLC focus action committees.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-unstyled mb-0 space-y-3 small text-secondary" style="line-height: 1.9;">
+                        <li><i class="fa-solid fa-circle-check text-success mr-2"></i>Exclusive voting rights for Executive Committee elections.</li>
+                        <li><i class="fa-solid fa-circle-check text-success mr-2"></i>Direct access to industry recognition and annual leadership awards.</li>
+                        <li><i class="fa-solid fa-circle-check text-success mr-2"></i>Dedicated communication channels with zero commercial advertisements.</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
-        <!-- Benefit Cards Grid -->
-        <div class="row">
-
-            <!-- 1. Executive Networking -->
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                <div class="benefit-card">
-                    <div class="icon-box">
-                        <i class="ti-user"></i>
-                    </div>
-                    <h4>Executive Networking</h4>
-                    <p>
-                        Engage directly with CIOs, CTOs, Heads of IT, and Senior Technology Managers across industries to build high-trust professional relationships with key decision-makers.
-                    </p>
-                </div>
-            </div>
-
-            <!-- 2. Knowledge Sharing & Roundtables -->
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                <div class="benefit-card">
-                    <div class="icon-box">
-                        <i class="ti-light-bulb"></i>
-                    </div>
-                    <h4>Knowledge Sharing</h4>
-                    <p>
-                        Participate in closed-door sessions, panel roundtables, and workshops sharing real-world insights on enterprise architecture, cybersecurity, cloud, and digital transformation.
-                    </p>
-                </div>
-            </div>
-
-            <!-- 3. Career Advancement -->
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                <div class="benefit-card">
-                    <div class="icon-box">
-                        <i class="ti-briefcase"></i>
-                    </div>
-                    <h4>Career &amp; Executive Placement</h4>
-                    <p>
-                        Gain enhanced visibility within the corporate technology landscape and access exclusive executive opportunities, board appointments, and leadership referrals.
-                    </p>
-                </div>
-            </div>
-
-            <!-- 4. Mentorship & Peer Coaching -->
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                <div class="benefit-card">
-                    <div class="icon-box">
-                        <i class="ti-direction-alt"></i>
-                    </div>
-                    <h4>Mentorship &amp; Peer Coaching</h4>
-                    <p>
-                        Access structured mentorship and peer support designed to accelerate managerial competence and transition senior practitioners into strategic C-suite leaders.
-                    </p>
-                </div>
-            </div>
-
-            <!-- 5. Industry Standards & Policy -->
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                <div class="benefit-card">
-                    <div class="icon-box">
-                        <i class="ti-agenda"></i>
-                    </div>
-                    <h4>Industry Benchmarks &amp; Standards</h4>
-                    <p>
-                        Contribute directly to setting national technology guidelines, best practices, and collaborative policy discussions that advance Bangladesh's digital ecosystem.
-                    </p>
-                </div>
-            </div>
-
-            <!-- 6. Exclusive Summits & Recognition -->
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                <div class="benefit-card">
-                    <div class="icon-box">
-                        <i class="ti-medall"></i>
-                    </div>
-                    <h4>Recognition &amp; Annual Summits</h4>
-                    <p>
-                        Enjoy priority access to annual ITLC conferences, technology summits, leadership seminars, and member recognition awards honoring excellence in technology leadership.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Additional Membership Privileges -->
-        <div class="row">
-            <div class="col-12">
-                <h2 class="section-heading">Key Membership Privileges</h2>
-                <ul class="benefits-list">
-                    <li><strong>Official ITLC Membership ID &amp; Directory Listing:</strong> Gain a verified digital identity on the official community portal showcasing your professional credentials.</li>
-                    <li><strong>Action Teams &amp; Working Groups:</strong> Eligibility to join specialized ITLC domain committees focusing on Cloud, AI, Security, and Enterprise Applications.</li>
-                    <li><strong>Collaborative Research &amp; White Papers:</strong> Access and contribute to exclusive industry reports, tech surveys, and strategic leadership white papers.</li>
-                    <li><strong>Voting Rights &amp; Community Participation:</strong> Active voice in electing and shaping committee initiatives and community roadmap.</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Call to Action Box -->
-        <div class="row">
-            <div class="col-12">
-                <div class="cta-box">
-                    <h4>Ready to Elevate Your Leadership Journey?</h4>
-                    <p class="text-center">
-                        Join hundreds of senior IT leaders shaping the future of technology in Bangladesh.
-                    </p>
-                    <a href="#" data-toggle="modal" data-target="#signupModal" class="btn btn-primary px-4 py-2 mr-2">
-                        Become a Member
-                    </a>
-                    <a href="membership-criteria.php" class="btn btn-criteria px-4 py-2">
-                        View Membership Criteria
-                    </a>
-                </div>
+        <!-- Call to Action Banner -->
+        <div class="p-4 p-md-5 rounded-xl text-white text-center position-relative overflow-hidden" style="background: linear-gradient(135deg, #021424 0%, #03233e 50%, #06487a 100%); border-radius: 20px;">
+            <h3 class="font-weight-bold text-white mb-2" style="font-size: 24px;">Experience the ITLC Leadership Advantage</h3>
+            <p class="text-white-50 mx-auto mb-4" style="max-width: 600px; font-size: 14.5px;">
+                Elevate your leadership scope, mentor emerging talent, and shape the national digital roadmap.
+            </p>
+            <div class="d-flex justify-content-center flex-wrap gap-2">
+                <a href="#" data-toggle="modal" data-target="#signupModal" class="btn btn-primary rounded-pill px-5 py-2 mr-2 font-weight-bold">
+                    Become a Member
+                </a>
+                <a href="membership-fee.php" class="btn btn-outline-light rounded-pill px-4 py-2 font-weight-bold">
+                    View Fee Structure
+                </a>
             </div>
         </div>
 
